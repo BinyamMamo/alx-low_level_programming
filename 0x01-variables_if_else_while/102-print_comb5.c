@@ -14,7 +14,7 @@ for (ii = 48; ii <= 57; ii++)
 {
 for (i = 48; i <= 57; i++)
 {
-j=i+1;
+j = i + 1;
 for (jj = ii; jj <= 57; jj++)
 {
 for (; j <= 57; j++)
@@ -29,7 +29,7 @@ continue;
 putchar(',');
 putchar(' ');
 }
-j=48;
+j = 48;
 }
 }
 }
