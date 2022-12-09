@@ -7,25 +7,24 @@
  */
 int main(void)
 {
-int i, j, k, l;
+
+int i, j;
+int ii, jj;
+for (ii = 48; ii <= 57; ii++)
+{
 for (i = 48; i <= 57; i++)
 {
-for (j = 48; j <= 56; j++)
+for (jj = ii; jj <= 57; jj++)
 {
-for (k = 48; k <= 57; k++)
+for (j = i + 1; j <= 57; j++)
 {
-for (l = 49; l <= 57; l++)
-{
+putchar((char)ii);
 putchar((char)i);
-putchar((char)j);
 putchar(' ');
-putchar((char)k);
-putchar((char)l);
-if (i != 57 || j != 56 || k != 57 || l != 57)
-{
+putchar((char)jj);
+putchar((char)j);
 putchar(',');
 putchar(' ');
-}
 }
 }
 }
