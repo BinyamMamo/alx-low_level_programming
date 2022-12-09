@@ -24,7 +24,7 @@ putchar((char)i);
 putchar(' ');
 putchar((char)jj);
 putchar((char)j);
-if(ii == 57 && i == 56)
+if (ii == 57 && i == 56)
 continue;
 putchar(',');
 putchar(' ');
