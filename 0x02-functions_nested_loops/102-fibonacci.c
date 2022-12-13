@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-float a = 1;
-float b = 2;
+double a = 1;
+double b = 2;
 int i = 0;
-float temp;
+double temp;
 printf("%1.0f", a);
 for (; i < 49; i++)
 {
