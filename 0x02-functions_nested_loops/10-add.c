@@ -1,4 +1,4 @@
-#include "alx.h"
+#include "main.h"
 
 /**
  * add - computes the sum of two numbers
