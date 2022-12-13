@@ -6,19 +6,18 @@
  */
 int main(void)
 {
-int a = 1;
-int b = 2;
-int temp;
-double sum = 0;
-while (b < 4000000)
+double a = 1;
+double b = 2;
+int i = 0;
+double temp;
+printf("%1.0f", a);
+for (; i < 97; i++)
 {
-if ((b % 2) == 0)
-sum = sum + b;
+printf(", %1.0f", b);
 temp = b;
 b = a + b;
 a = temp;
 }
-printf("%1.0f", sum);
 printf("\n");
 return (0);
 }
