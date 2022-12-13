@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-long long int a = 1;
-long long int b = 2;
+double a = 1;
+double b = 2;
 int i = 0;
-long long int temp;
+double temp;
 printf("%d", a);
 for (; i < 49; i++)
 {
-printf(", %lld", b);
+printf(", %1.0lf", b);
 temp = b;
 b = a + b;
 a = temp;
