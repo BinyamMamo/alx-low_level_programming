@@ -12,9 +12,6 @@ if (n >= 0)
 _putchar((n % 10) + '0');
 return (n % 10);
 }
-if(n == INT_MIN)
-return (INT_MAX % 10);
-n = n * -1;
-_putchar((n % 10) + '0');
+_putchar(((n % 10) *-1) + '0');
 return (n % 10);
 }
