@@ -27,7 +27,6 @@ _putchar(((j * i) / 10) + '0');
 _putchar(((j * i) % 10) + '0');
 }
 }
-_putchar('$');
 _putchar('\n');
 }
 }
