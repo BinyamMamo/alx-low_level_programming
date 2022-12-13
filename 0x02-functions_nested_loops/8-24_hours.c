@@ -1,4 +1,4 @@
-#include "alx.h"
+#include "main.h"
 
 /**
  * jack_bauer - prints the minutes from 00:00 - 23:59
