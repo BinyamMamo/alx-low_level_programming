@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-long double a = 1;
-long double b = 2;
+double a = 1;
+double b = 2;
 int i = 0;
-long double temp;
+double temp;
 printf("%1.0Lf", a);
 for (; i < 97; i++)
 {
