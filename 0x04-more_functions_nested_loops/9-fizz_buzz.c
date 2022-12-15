@@ -2,7 +2,7 @@
 
 /**
  * main - fizz buzz program
- * Return: 0 if suzzesful
+ * Return: 0 if succesful
  */
 
 int main(void)
@@ -25,3 +25,4 @@ printf(" ");
 }
 return (0);
 }
+
