@@ -7,19 +7,17 @@ void pint(int);
 int len(int);
 
 /**
- * pint - prints each character of a number
- * using the putchar function in stdio.h library
- * @num: the base number
- * @num: the number to be printed
+ * print_number - prints each character of a number
+ * @n: the number to be printed
  * Return: void
  */
 
 void print_number(int n)
 {
-if(n < 0)
+if (n < 0)
 {
 _putchar('-');
-if(n == INT_MIN)
+if (n == INT_MIN)
 n = INT_MAX;
 else
 n = n * -1;
