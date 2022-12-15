@@ -2,7 +2,8 @@
 
 /**
  * main - fizz buzz program
- * Return: 0 if succesful
+ *
+ * Return: 0 if succesful.
  */
 
 int main(void)
@@ -23,7 +24,7 @@ printf("%d", i);
 if (i != 100)
 printf(" ");
 }
-printf("\n");
+putchar('\n');
 return (0);
 }
 
