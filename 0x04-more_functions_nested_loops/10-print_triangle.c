@@ -8,14 +8,14 @@
 void print_triangle(int size)
 {
 int i = 0;
-if(size > 0)
+if (size > 0)
 {
 for (; i < size; i++)
 {
 int j = 0;
 for (; j < size; j++)
 {
-if (i + j >= size -1)
+if (i + j >= size - 1)
 _putchar('#');
 else
 _putchar(' ');

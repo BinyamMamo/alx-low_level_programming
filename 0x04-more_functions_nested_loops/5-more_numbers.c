@@ -12,7 +12,7 @@ for (; i < 10; i++)
 int j = 0;
 for (; j < 15; j++)
 {
-if(j >= 10)
+if (j >= 10)
 {
 _putchar('0' + j / 10);
 _putchar('0' + j % 10);
