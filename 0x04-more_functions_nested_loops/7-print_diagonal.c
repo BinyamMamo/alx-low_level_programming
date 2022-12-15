@@ -19,6 +19,7 @@ for (; i < n; i++)
 if (i == j)
 {
 _putchar('\\');
+break;
 }
 else
 {
