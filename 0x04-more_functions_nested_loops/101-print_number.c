@@ -39,25 +39,26 @@ return (c);
  * Return: void
  */
 
-void print_number(double n)
+void print_number(int n)
 {
-if (n < 0)
+double num = n;
+if (num < 0)
 {
 _putchar('-');
-n = n * -1;
+num = num * -1;
 }
-if (n < 10)
+if (num < 10)
 {
-_putchar('0' + (int)n);
+_putchar('0' + (int)num);
 return;
 }
-int l = len(n);
+int l = len(num);
 int i = l - 1;
 for (; i >= 0; i--)
 {
 double p = pow(10, i);
-int c = (int)(n / p);
-n = n - (c *p);
+int c = (int)(num / p);
+num = num - (c *p);
 _putchar('0' + c);
 }
 }
