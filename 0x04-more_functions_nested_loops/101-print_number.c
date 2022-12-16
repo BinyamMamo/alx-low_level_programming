@@ -6,7 +6,7 @@
  * mod - finds the modulo/remainder of two double numbers
  * @a: the first double number
  * @b: the second double number
- * Return: the modulo of the two numbers 
+ * Return: the modulo of the two numbers
  */
 int mod(double a, double b)
 {
@@ -41,14 +41,14 @@ return (c);
 
 void print_number(double n)
 {
-if(n < 0)
+if (n < 0)
 {
-putchar('-');
+_putchar('-');
 n = n * -1;
 }
-if(n < 10)
+if (n < 10)
 {
-putchar('0' + (int)n);
+_putchar('0' + (int)n);
 return;
 }
 int l = len(n);
@@ -58,6 +58,6 @@ for (; i >= 0; i--)
 double p = pow(10, i);
 int c = (int)(n / p);
 n = n - (c * p);
-putchar('0' + c);
+_putchar('0' + c);
 }
 }
