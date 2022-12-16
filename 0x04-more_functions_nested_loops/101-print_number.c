@@ -57,7 +57,7 @@ for (; i >= 0; i--)
 {
 double p = pow(10, i);
 int c = (int)(n / p);
-n = n - (c * p);
+n = n - (c *p);
 _putchar('0' + c);
 }
 }
