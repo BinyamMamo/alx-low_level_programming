@@ -45,6 +45,8 @@ return (c);
 void print_number(int n)
 {
 double num = n;
+int l = len(num);
+int i = l - 1;
 if (num < 0)
 {
 _putchar('-');
@@ -55,8 +57,6 @@ if (num < 10)
 _putchar('0' + (int)num);
 return;
 }
-int l = len(num);
-int i = l - 1;
 for (; i >= 0; i--)
 {
 double p = pow(10, i);
