@@ -2,6 +2,7 @@
 #include <math.h>
 #include <limits.h>
 
+double pw(int, int);
 int mod(double a, double b);
 int len(double n);
 
@@ -16,6 +17,21 @@ int mod(double a, double b)
 if (a / b == round(a / b))
 return (0);
 return (1);
+}
+
+/**
+ * pw - opt for the pow() function in math.h lib
+ * @n: the base number
+ * @p: the power
+ * Return: n to the power of p
+ */
+
+double pw(int n, int p)
+{
+int i = 0, r = 1;
+for (; i < p; i++)
+r = r *n;
+return (r);
 }
 
 /**
@@ -59,7 +75,7 @@ return;
 }
 for (; i >= 0; i--)
 {
-double p = pow(10, i);
+double p = pw(10, i);
 int c = (int)(num / p);
 num = num - (c *p);
 _putchar('0' + c);
