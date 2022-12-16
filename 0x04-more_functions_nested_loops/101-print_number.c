@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 #include <limits.h>
 
 double pw(int, int);
