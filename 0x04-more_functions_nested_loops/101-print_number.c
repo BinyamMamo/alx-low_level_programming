@@ -13,7 +13,7 @@ int len(double n);
  */
 int mod(double a, double b)
 {
-if (a / b == round(a / b))
+if (a / b == (int)(a / b))
 return (0);
 return (1);
 }
