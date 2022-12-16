@@ -1,58 +1,129 @@
 #include <stdio.h>
 
+#include <math.h>
+
+
 
 /**
- * pf - find the number of factors a number has
- * @n: the number whose factor is to be calculated
- * Return: the number of factors
+
+ * mod - finds the modulo/remainder of two double numbers
+
+ * @a: the first double number
+
+ * @b: the second double number
+
+ * Return: the modulo of the two numbers 
+
  */
 
-int pf(long int n)
+int mod(double a, double b)
+  
 {
-int c = 0;
-long int i = 2;
-for (; i < n; i++)
-{
-
-if (n % i == 0)
-c++;
-
-}
-return (c);
+  
+  if (a/b == round(a/b))
+    
+    return (0);
+  
+  return (1);
+  
 }
 
-/**
- * divide - divides the number by its lowest prime factor
- * @n: the number to be divided
- * Return: the quotient
+
+
+/** 
+
+ * cf - counts the number of factors
+
+ * @n: the number whose factor is to be counted
+
+ * Return: the number of factors n has
+
  */
-double divide(long int n)
-{
-long int i = 2;
-for (; i < n; i++)
-{
 
-if (n % i == 0)
-return (n / i);
+int cf(double n)
+  
+{
+  
+  int c = 0;
+  
+  double i = 2;
+  
+  for (; i <= n / 2; i++)
+    
+    {
+      
+      if (c > 0)
+	
+	break;
+      
+      if (mod(n, i) == 0)
+	
+	c++;
+      
+    }
+  
+  return (c);
+  
+}
 
-}
-return (n);
-}
 
 
 /**
- * main - find the largest prime factor
- * Return: 0 if successful
+
+ * factor - divides the number by its lowest prime factor
+
+ * @n: the number to factor
+
+ * Return: the factor of the number
+
+ */
+
+double factor(double n)
+  
+{
+  
+  double i = 2;
+  
+  for (; i <= n / 2; i++)
+    
+    {
+      
+      if (mod(n, i) == 0)
+	
+	return n/i;
+      
+    }
+  
+  return (n);
+  
+}
+
+
+
+/**
+
+ * main - Entry point of the program, prints the largest factor of 612852475143
+
+ * Return - 0 always 
+
  */
 
 int main(void)
+  
 {
-double nn = 612852475143;
-long int 
-while (pf(n) != 0)
-{
-n = divide(n);
-}
-printf("%f\n", n);
-return (0);
+  
+  double num = 612852475143;
+  
+  while (cf(num) != 0)
+    
+    {
+      
+      num = factor(num);
+      
+    }
+  
+  printf("%0.0f\n", num);
+  
+  return (0);
+  
 }
