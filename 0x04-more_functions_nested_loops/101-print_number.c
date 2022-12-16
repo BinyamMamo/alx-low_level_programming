@@ -2,6 +2,9 @@
 #include <math.h>
 #include <limits.h>
 
+int mod(double a, double b);
+int len(double n);
+
 /**
  * mod - finds the modulo/remainder of two double numbers
  * @a: the first double number
