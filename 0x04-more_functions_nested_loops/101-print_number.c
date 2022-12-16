@@ -1,10 +1,37 @@
-#include<stdio.h>
-#include "main.h"
+#include <stdio.h>
+#include <math.h>
 #include <limits.h>
 
-int pw(int, int);
-void pint(int);
-int len(int);
+/**
+ * mod - finds the modulo/remainder of two double numbers
+ * @a: the first double number
+ * @b: the second double number
+ * Return: the modulo of the two numbers 
+ */
+int mod(double a, double b)
+{
+if (a / b == round(a / b))
+return (0);
+return (1);
+}
+
+/**
+ * len - computes the length of a double number
+ * @n: the number whose number of digits
+ * is to be calculated
+ * Return: the number of digits of n
+ */
+
+int len(double n)
+{
+int c = 0;
+while (n)
+{
+c++;
+n = (int)n / 10;
+}
+return (c);
+}
 
 /**
  * print_number - prints each character of a number
@@ -12,62 +39,25 @@ int len(int);
  * Return: void
  */
 
-void print_number(int n)
+void print_number(double n)
 {
-if (n < 0)
+if(n < 0)
 {
-_putchar('-');
-if (n == INT_MIN)
-n = INT_MAX;
-else
+putchar('-');
 n = n * -1;
 }
-if (n < 10)
-_putchar('0' + n);
-else
+if(n < 10)
 {
+putchar('0' + (int)n);
+return;
+}
 int l = len(n);
 int i = l - 1;
-int ch;
 for (; i >= 0; i--)
 {
-ch = n / pw(10, i);
-n = n % pw(10, i);
-_putchar('0' + ch);
+double p = pow(10, i);
+int c = (int)(n / p);
+n = n - (c * p);
+putchar('0' + c);
 }
-}
-}
-
-/**
- * len - computes the length of digits
- * of an integer number
- * @n: the number whose number of digits
- * is to be calculated
- * Return: the number of digits of n
- */
-
-int len(int n)
-{
-int i;
-for (i = 1; i <= 10; i++)
-{
-if ((n / pw(10, i)) == 0)
-break;
-}
-return (i);
-}
-
-/**
- * pw - opt for the pow() function in math.h lib
- * @n: the base number
- * @p: the power
- * Return: n to the power of p
- */
-
-int pw(int n, int p)
-{
-int i = 0, r = 1;
-for (; i < p; i++)
-r = r *n;
-return (r);
 }
