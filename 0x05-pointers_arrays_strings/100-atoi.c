@@ -1,5 +1,5 @@
 #include <stdio.h>
-int len(char *);
+
 int pw(int, int);
 /**
  * pw - finds the power of n to p
@@ -19,22 +19,6 @@ int pw(int n, int  p)
 	return (r);
 }
 
-/**
- * len - finds the length of string
- * @s: a character array to store the input
- * Return: the length of s
- */
-int len(char *s)
-{
-	int c = 0;
-
-	while (s[c] != '\0')
-	{
-		c++;
-	}
-	return (c);
-}
-
 
 /**
  * _atoi - parses integer from a string
@@ -43,7 +27,13 @@ int len(char *s)
  */
 int _atoi(char *s)
 {
-	int i = len(s) - 1;
+	int c = 0;
+
+	while (s[c] != '\0')
+	{
+		c++;
+	}
+	int i = c - 1;
 	int num = 0;
 	int k = 0;
 
