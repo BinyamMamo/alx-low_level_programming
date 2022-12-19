@@ -27,14 +27,15 @@ int pw(int n, int  p)
  */
 int _atoi(char *s)
 {
-	int c = 0;
+	int i = 0;
 
 	while (s[c] != '\0')
 	{
-		c++;
+		i++;
 	}
 
-	int i = c - 1;
+	i--;
+
 	int num = 0;
 	int k = 0;
 
