@@ -10,6 +10,7 @@ int len(char *);
 void rev_string(char *str)
 {
 	int i = 0;
+
 	for (; i < len(str) / 2; i++)
 	{
 		char temp = str[i];
@@ -27,8 +28,9 @@ void rev_string(char *str)
 int len(char *str)
 {
 	int c = 0;
+	int i = 0;
 
-	for (int i = 0; str[i] != '\0'; ++i)
+	for (; str[i] != '\0'; ++i)
 	{
 		c++;
 	}
