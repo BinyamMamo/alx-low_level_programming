@@ -6,7 +6,6 @@ void swap_int(int *a, int *b);
 int _atoi(char *);
 void reset_to_98(int *);
 int _strlen(char *);
-void puts(char *str);
 void puts2(char *str);
 void puts_half(char *str);
 void print_array(int *a, int n);
