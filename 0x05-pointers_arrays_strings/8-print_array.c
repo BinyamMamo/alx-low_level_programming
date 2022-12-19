@@ -2,7 +2,8 @@
 
 int pw(int, int);
 void pint(int);
-int len(int);
+int length(int);
+int len(char *str);
 
 /**
  * pint - prints each character of a number
@@ -41,13 +42,14 @@ void pint(int num)
 
 int length(int n)
 {
-int i;
-for (i = 1; i <= 10; i++)
-{
-if ((n / pw(10, i)) == 0)
-break;
-}
-return (i);
+	int i = 1;
+
+	for (; i <= 10; i++)
+	{
+		if ((n / pw(10, i)) == 0)
+			break;
+	}
+	return (i);
 }
 
 /**
@@ -59,13 +61,13 @@ return (i);
 
 int pw(int n, int p)
 {
-int i = 0, r = 1;
-for (; i < p; i++)
-r = r *n;
-return (r);
+	int i = 0, r = 1;
+
+	for (; i < p; i++)
+		r = r * n;
+	return (r);
 }
 
-int length(char *str);
 
 /**
  * print_array - prints the first n elements of an array
