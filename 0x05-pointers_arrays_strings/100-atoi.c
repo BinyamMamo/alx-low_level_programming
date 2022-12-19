@@ -33,6 +33,7 @@ int _atoi(char *s)
 	{
 		c++;
 	}
+
 	int i = c - 1;
 	int num = 0;
 	int k = 0;
