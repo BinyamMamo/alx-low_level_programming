@@ -21,14 +21,14 @@ int pw(int n, int  p)
 
 /**
  * len - finds the length of string
- * @str: a character array to store the input
- * Return: the length of str
+ * @s: a character array to store the input
+ * Return: the length of s
  */
-int len(char *str)
+int len(char *s)
 {
 	int c = 0;
 
-	while (str[c] != '\0')
+	while (s[c] != '\0')
 	{
 		c++;
 	}
@@ -38,30 +38,30 @@ int len(char *str)
 
 /**
  * _atoi - parses integer from a string
- * @str: string to be converted to integer
+ * @s: string to be converted to integer
  * Return: the converted integer
  */
-int _atoi(char *str)
+int _atoi(char *s)
 {
-	int i = len(str) - 1;
+	int i = len(s) - 1;
 	int num = 0;
 	int k = 0;
 
 	for (; i >= 0; --i)
 	{
-		if (str[i] >= 48 && str[i] <= 57)
+		if (s[i] >= 48 && s[i] <= 57)
 		{
-			int n = str[i] - 48;
+			int n = s[i] - 48;
 
 			num = num + (n * pw(10, k));
 			k++;
 		}
-		else if (num != 0 && str[i] != ' ' && str[i] != '-' && str[i] != '+')
+		else if (num != 0 && s[i] != ' ' && s[i] != '-' && s[i] != '+')
 		{
 			num = 0;
 			k = 0;
 		}
-		if (str[i] == '-' && num != 0)
+		if (s[i] == '-' && num != 0)
 		{
 			num = num * -1;
 		}
