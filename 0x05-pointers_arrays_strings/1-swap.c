@@ -1,5 +1,5 @@
 /**
- * swap - swaps two integers using pointers
+ * swap_int - swaps two integers using pointers
  * @a: a pointer to access the first integer
  * @b: a pointer to access the second integer
  * Return: nothing
