@@ -28,6 +28,8 @@ int pw(int n, int  p)
 int _atoi(char *s)
 {
 	int i = 0;
+	int num = 0;
+	int k = 0;
 
 	while (s[i] != '\0')
 	{
@@ -35,9 +37,6 @@ int _atoi(char *s)
 	}
 
 	i--;
-
-	int num = 0;
-	int k = 0;
 
 	for (; i >= 0; --i)
 	{
