@@ -1,18 +1,17 @@
 #include <stdio.h>
+#include "main.h"
 
-void puts_half(char *str);
 int len(char *str);
 
-int main(int argc, char const *argv[])
-{
-	printf("%s\n", "Hello world!!!");
-	puts_half("0123456789");
-	return 0;
-}
-
+/**
+ * puts_half - prints half of the string starting from the middle
+ * @str: string to print
+ * Return: nothing
+ */
 void puts_half(char *str)
 {
 	int i = len(str) / 2;
+
 	if(len(str) % 2 != 0)
 		i++;
 
@@ -20,12 +19,21 @@ void puts_half(char *str)
 	{
 		putchar(str[i]);
 	}
+	putchar('\n');
 }
+
+/**
+ * len - finds the length of string
+ * @str: a character array to store the input
+ * Return: the length of str
+ */
 
 int len(char *str)
 {
 	int c = 0;
-	for (int i = 0; str[i] != '\0'; ++i)
+	int i = 0;
+
+	for (; str[i] != '\0'; ++i)
 	{
 		c++;
 	}
