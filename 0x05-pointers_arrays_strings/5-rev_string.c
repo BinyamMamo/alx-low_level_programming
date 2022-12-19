@@ -7,7 +7,8 @@ int len(char *);
  */
 void rev_string(char *str)
 {
-	for (int i = 0; i < len(str) / 2; i++)
+	int i = 0;
+	for (; i < len(str) / 2; i++)
 	{
 		char temp = str[i];
 
