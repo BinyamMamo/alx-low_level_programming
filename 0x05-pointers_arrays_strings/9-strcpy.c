@@ -1,29 +1,36 @@
 #include <stdio.h>
 
-char *_strcpy(char *dest, char *src);
 int len(char *str);
 
-int main(int argc, char const *argv[])
-{
-	printf("%s\n", "Hello world!!!");
-	char str[98] = "hiw";
-	_strcpy(str,"HHI");
-	return 0;
-}
-
+/**
+ * *_strcpy - copies string
+ * @dest: a string to store the copied string
+ * @src: string to copy
+ * Return: the copied string(dest)
+ */
 char *_strcpy(char *dest, char *src)
 {
-	for (int i = 0; i < len(src); ++i)
+	int i = 0;
+
+	for (; i < len(src); ++i)
 	{
 		dest[i] = src[i];
 	}
 	return (dest);
 }
 
+/**
+ * len - finds the length of string
+ * @str: a character array to store the input
+ * Return: the length of str
+ */
+
 int len(char *str)
 {
 	int c = 0;
-	for (int i = 0; str[i] != '\0'; ++i)
+	int i = 0;
+
+	for (; str[i] != '\0'; ++i)
 	{
 		c++;
 	}
