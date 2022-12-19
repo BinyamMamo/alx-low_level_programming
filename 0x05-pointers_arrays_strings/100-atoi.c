@@ -29,7 +29,7 @@ int _atoi(char *s)
 {
 	int i = 0;
 
-	while (s[c] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}
