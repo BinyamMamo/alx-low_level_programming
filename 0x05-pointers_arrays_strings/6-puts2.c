@@ -1,28 +1,32 @@
-#include <stdio.h>
+int len(char *);
 
-void puts2(char *str);
-int len(char *str);
-
-int main(int argc, char const *argv[])
-{
-	printf("%s\n", "Hello world!!!");
-	puts2("0123456789");
-	return 0;
-}
-
+/**
+ * puts2 - prints even items of a string
+ * @str: string to print
+ * Return: nothing
+ */
 void puts2(char *str)
 {
-	for (int i = 0; i < len(str); ++i)
+	int i = 0;
+
+	for (; i < len(str); ++i)
 	{
-		if(i % 2 == 0)
+		if (i % 2 == 0)
 			putchar(str[i]);
 	}
 }
 
+/**
+ * len - finds the length of string
+ * @str: a character array to store the input
+ * Return: the length of str
+ */
 int len(char *str)
 {
 	int c = 0;
-	for (int i = 0; str[i] != '\0'; ++i)
+	int i = 0;
+
+	for (; str[i] != '\0'; ++i)
 	{
 		c++;
 	}
