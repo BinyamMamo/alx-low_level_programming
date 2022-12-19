@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <limits.h>
 int len(char *);
 int pw(int, int);
 /**
