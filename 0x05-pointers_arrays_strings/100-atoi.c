@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-
+#include <limits.h>
 /**
  * _atoi - parses integer from a string
  * @s: string to be converted to integer
