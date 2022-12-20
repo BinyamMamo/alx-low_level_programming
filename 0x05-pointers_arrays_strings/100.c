@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <limits.h>
+
 /**
  * _atoi - parses integer from a string
  * @s: string to be converted to integer
@@ -28,10 +29,15 @@ int _atoi(char *s)
 		if (s[i] > 47 && s[i] < 58)
 		{
 			k = 0;
-			if (((num * 10) + (s[i] - 48) - 1) == INT_MAX)
+			if (((num * 10) + (s[i] - 49)) == INT_MAX)
+			{
 				num = INT_MIN;
+				break;
+			}
 			else
+			{
 				num = (num * 10) + (s[i] - 48);
+			}
 		}
 		if ((s[i] < 48 || s[i] > 57) && k == 0)
 			break;
