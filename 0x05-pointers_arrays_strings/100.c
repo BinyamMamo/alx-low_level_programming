@@ -28,12 +28,16 @@ int _atoi(char *s)
 		if (s[i] > 47 && s[i] < 58)
 		{
 			k = 0;
-			num = (num * 10) + (s[i] - 48);
+			if (((num * 10) + (s[i] - 48) - 1) == INT_MAX)
+				num = INT_MIN;
+			else
+				num = (num * 10) + (s[i] - 48);
 		}
 		if ((s[i] < 48 || s[i] > 57) && k == 0)
 			break;
 		i++;
 	}
-
+	if (num == INT_MIN)
+		return (INT_MIN);
 	return (num * sign);
 }
