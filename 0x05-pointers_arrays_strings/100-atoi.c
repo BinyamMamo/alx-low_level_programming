@@ -19,6 +19,7 @@ int pw(int n, int  p)
 	return (r);
 }
 
+"a+-b+--+cd345sadjaksdhajki"
 
 /**
  * _atoi - parses integer from a string
