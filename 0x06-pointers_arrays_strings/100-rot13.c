@@ -1,26 +1,28 @@
 #include <stdio.h>
-char *rot13(char *str);
 char repl(char c);
 
-int main(void)
-{
-	char s[] = "rot";
-	printf("Hello World!!!\n");
-	printf("%s",rot13(s));
-	return 0;
-}
-
+/**
+ * rot13 - rot13
+ * @str: first input
+ * Return: char
+ */
 char *rot13(char *str)
 {
 	int i = 0;
-  for (; str[i] != 0; ++i)
+
+	for (; str[i] != 0; ++i)
 	{
 		str[i] = repl(str[i]);
-		// printf("%c\n", str[i]);
 	}
+
 	return (str);
 }
 
+/**
+ * repl - repl
+ * @c: first input
+ * Return: char
+ */
 char repl(char c)
 {
 	char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -36,5 +38,6 @@ char repl(char c)
 			break;
 		}
 	}
+
 	return (c);
 }

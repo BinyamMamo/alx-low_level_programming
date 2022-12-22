@@ -1,5 +1,11 @@
 int len(char *str);
 
+/**
+ * _strcmp - compares strings
+ * @s1: first input
+ * @s2: second input
+ * Return: integer
+ */
 int _strcmp(char *s1, char *s2)
 {
 	int i = 0;

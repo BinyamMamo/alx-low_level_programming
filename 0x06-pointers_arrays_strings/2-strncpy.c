@@ -1,11 +1,10 @@
-/*#include <stdio.h>
-*/
 int len(char *str);
 
 /**
  * _strncpy - copies string
  * @dest: a string to store the copied string
  * @src: string to copy
+ * @n: no of char
  * Return: the copied string(dest)
  */
 char *_strncpy(char *dest, char *src, int n)
@@ -14,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (; i < n; ++i)
 	{
-		if(i > len(src))
+		if (i > len(src))
 			break;
 		dest[i] = src[i];
 	}

@@ -1,3 +1,8 @@
+/**
+ * string_toupper - string_toupper
+ * @str: first input
+ * Return: uppercase
+ */
 char *string_toupper(char *str)
 {
 	int i = 0;

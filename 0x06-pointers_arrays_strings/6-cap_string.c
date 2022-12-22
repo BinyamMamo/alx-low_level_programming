@@ -3,9 +3,15 @@
 
 int contains(char *str, char c);
 
+/**
+ * cap_string - cap_string
+ * @str: first input
+ * Return: char
+ */
 char *cap_string(char *str)
 {
 	int i = 0;
+
 	while (str[i] != 0)
 	{
 		if (str[0] >= 'a' && str[0] <= 'z')
@@ -25,6 +31,12 @@ char *cap_string(char *str)
 	return (str);
 }
 
+/**
+ * contains - contains
+ * @str: first input
+ * @c: second input
+ * Return: integer
+ */
 int contains(char *str, char c)
 {
 	int i = 0;
@@ -32,12 +44,9 @@ int contains(char *str, char c)
 
 	while (str[i] != 0)
 	{
-		if(str[i] == c)
+		if (str[i] == c)
 			cont = 1;
 		i++;
 	}
 	return (cont);
 }
-/*
- * str[i] == ' ' || str[i] == ',' || str[i] == ';' || str[i] == '.' || str[i] == '!' || str[i] == '?' || str[i] == '"' || str[i] == ' (' || str[i] == ')' || str[i] == '{' || str[i] == '}'
- */

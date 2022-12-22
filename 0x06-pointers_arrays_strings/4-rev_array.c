@@ -1,3 +1,9 @@
+/**
+ * reverse_array - reverse_array
+ * @a: first input
+ * @n: second input
+ * Return: nothing
+ */
 void reverse_array(int *a, int n)
 {
 
