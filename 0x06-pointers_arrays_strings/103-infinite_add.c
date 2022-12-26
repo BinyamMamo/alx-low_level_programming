@@ -3,38 +3,48 @@
 int len(char *str);
 void rev_string(char *str);
 char *_strcpy(char *dest, char *src);
-char *infinite_add(char *n1, char *n2, char *r, int size_r);
 
+/**
+ * infinite_add - adds two numbers with infinite digit
+ * @n1: first number in string format
+ * @n2: second number in string format
+ * @r: the buffer to store the result or the sum
+ * @size_r: the size of the buffer
+ * Return: pointer to the buffer
+ */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, k = 0;
+	int i = 0, k = 0, j = 0;
 	int a, b, rem, sum;
-	int largest = (len(n1) > len(n2))? len(n1): len(n2);
 	a = b = rem = sum = 0;
 
-	i = largest - 1;
-
-	while (i >= 0)
+	i = len(n1) - 1;
+	j = len(n2) - 1;
+	while (!(i < 0 && j < 0))
 	{
-		if (i > len(n1) - 1)
+		if (k >= size_r-2)
+			return (0);
+		if (i > len(n1) - 1 || i < 0)
 			a = 0;
 		else
 			a = n1[i] - 48;
 
-		if (i > len(n2) - 1)
+		if (j > len(n2) - 1 || j < 0)
 			b = 0;
 		else
-			b = n2[i] - 48;
+			b = n2[j] - 48;
 
 		sum = (a + b + rem) % 10;
 		rem = (a + b + rem) / 10;
 		r[k] = sum + 48;
 		i--;
+		j--;
 		k++;
 	}
-	r[k] = 0;
+	if (rem > 0)
+		r[k] = rem + 48;
+	r[k + 1] = 0;
 	rev_string(r);
-
 	return (r);
 }
 
