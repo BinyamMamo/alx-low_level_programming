@@ -1,0 +1,3 @@
+50 char = 50 byte
+5 mb text filoe contains 5 million characters.
+So Hello world amount to => 10 byte (0.01 kb)

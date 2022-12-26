@@ -1,0 +1,21 @@
+read number1, number2, number3
+declare min1, min2, max, temp
+
+if(a>b)
+min1=a
+max=b
+else
+min1=b
+max=a
+if(c<min1)
+temp = min1
+min1=c
+min2=temp
+else
+if(max>c)
+min2=c
+else
+temp=max
+max=c
+min2=temp
+print(min1,min2,max)

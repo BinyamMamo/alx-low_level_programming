@@ -1,0 +1,59 @@
+you can turn on your mic if you want.
+
+emacs = notepad++ + notepad++
+
+It is a text editor but with a lot of customizability and shortcuts. You can do anything with it. just like you do with vscode. You can write and compile c++/python... codes in it, since it has a terminal integrated to it. you know vscode also has terminal integrated to it.
+So when we get back to business
+emacs have two ways of accepting commands
+1. with shortcuts(if you want to memorise them all. but you might have to because that is what they ask you in the tasks and quizes) when you want to command emacs via shortxcuts you put C-x(ctrl + x) then emacs uderstands that a command is coming and becomes ready for it. for example when you press ctrl + x, emacs will become ready to listen to commands. and after you press ctrl + x, when you click "ctrl + s" it will know you are commanding it to save.
+Now remember in Notepad you just gotta press "ctrl + s" to save a file, but in emacs you have to press the "magic word" or I might better call it the command initializer, first.
+So saving in notepad = ctrl + s
+but saving in emacs = (ctrl + x) + (ctrl + s) you might see this written as C-x C-s, it just stands for pressing ctrl + x then ctrl + s
+
+and to open a file in notepad you just gotta press ctrl + o, RIGHT?
+BUT IN emacs you press ctrl + x then some command I don't really remember right now, I think it is ctrl + f
+But I think you get where I am going with this. RIGHT? 
+OKAY GOOD SO THE GENERal formula for giving command for emacs is pressing ctrl + x then any command you want. OKAY?
+
+C-x C-f => this one is the shortxcut one (the 1st way)
+the long command name for this is find-file => this one is the 2nd way
+To use the second way, actually we will come back for it. let's finish the first way shall we? let's use the shortcuts.
+
+
+The space below the "*messages*" word is the place you put your commands, actually you don't have to click it to press the commands but it is the place where your commands will be displayed.
+now i am gonna press ctrl+x
+see what I mean when I press ctrl + x, it shows up at the bottom.
+lets do it again shall we?
+now press ctrl + f
+it is asking me for the file name 
+(you see it says find file:) (the f in the ctrl + f came from here, opening a file is like finding it . R-I-G-H-T?)
+NOW LETS INPUT THE FILE NAME
+then hit enter(BTW RET stands for enter)
+so C-x C-f RET stands for ctrl+x + xtrl+f + enter
+RET stands for return/enter
+surprise now you have a new file OPENED!!!!
+
+
+
+
+
+
+
+
+
+
+2. but you have choice to command it via words(like If you want to save you just say "save" after you say the "magic word") and the magic word is "M-x" which stands for Alt-x. That is after you press Alt + x on your keyboard, you can command emacs anything you want. for example: (let me open emacs)
+
+NB: you can open emacs for cmd, by typing emacs. that works for vim/vi too.
+NB: BTW you can open new file by typing emacs and the name of your new file together in cmd.
+
+Okay to start new file you type "emacs" and "the name of your file/anything you want with/without extensions like .txt" (to see an example:)
+okay now lets get back to creating the new file from emacs itself
+NB: One thing to remember with emacs and vi/vim is that creating a new file and opening a previuosly existing file have the same command.
+I mean you just put the file opening command and put the name of the file, then:
+	If the file exists it will open the file you specified
+	but if the file does not exist a new file will be created on the current directory/which mostly is the documents folder
+okay for your question I kinda don't know the command I alwways do searching on google so that is what we are gonna do
+But before we do that I told you there was a "magic word" before you put your commands for emacs. and that magic word is "C-x" which stands for ctrl/control + x. Now remember I said Alt + x(M-x) was the magic word. Right?  
+But you use C-x when you want to command the emacs via shortcuts/the 1st way.
+

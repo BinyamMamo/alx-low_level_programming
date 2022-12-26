@@ -21,7 +21,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	a = b = rem = sum = 0;
 	rev_string(n1);
 	rev_string(n2);
-	int largest = (len(n1) > len(n2))? len(n1): len(n2);
+	int largest = (len(n 1) > len(n2))? len(n1): len(n2);
 	char str[largest + 2];
 
 	while (!(i >= len(n1) && i >= len(n2)))

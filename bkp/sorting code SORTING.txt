@@ -1,0 +1,40 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+    cout << "Hello world!" << endl;
+    int a,b,c,temp;
+    cin >> a >> b >> c ;
+    int min1, min2, max;
+    // while(swap == 1){
+        // int min1, min2;
+        if(a<b){
+            min1 = a;
+            max = b;
+        } else{
+            min1 = b;
+            max = a;  
+        }
+        
+        if(c<min1){
+            temp = min1;
+            min1 = c;
+            min2 = temp;
+        }else{
+            if(max > c){
+                min2 = c;
+                max = max;
+            }
+            else{
+                temp = max;
+                max = c;
+                min2 = temp;
+            }
+        }
+
+        cout << min1 << min2 << max;
+        
+    // }
+    return 0;
+}
