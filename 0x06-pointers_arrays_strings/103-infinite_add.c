@@ -16,13 +16,13 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i = 0, k = 0, j = 0;
 	int a, b, rem, sum;
-	a = b = rem = sum = 0;
 
+	a = b = rem = sum = 0;
 	i = len(n1) - 1;
 	j = len(n2) - 1;
 	while (!(i < 0 && j < 0))
 	{
-		if (k >= size_r-2)
+		if (k >= size_r - 2)
 			return (0);
 		if (i > len(n1) - 1 || i < 0)
 			a = 0;
