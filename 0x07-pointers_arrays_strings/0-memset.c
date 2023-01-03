@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * _memset - memset
  * @s: s
@@ -7,7 +9,7 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-int i;
+unsigned int i;
 
 i = 0;
 while (i < n && s[i] != 0)
