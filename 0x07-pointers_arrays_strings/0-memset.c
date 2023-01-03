@@ -1,4 +1,3 @@
-
 /**
  * _memset - memset function
  * @s: string
