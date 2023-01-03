@@ -1,3 +1,11 @@
+/**
+ * _strchr) - strchr
+ * @s: string
+ * @c: char
+ *
+ * Return: occurence
+ */
+
 char *_strchr(char *s, char c)
 {
 int i, state;
