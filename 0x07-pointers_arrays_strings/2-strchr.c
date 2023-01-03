@@ -14,16 +14,16 @@ int i, state;
 
 i = 0;
 state = 0;
-while (s[i] != 0)
+
+for (; !s[i]; i++)
 {
 if (s[i] == c)
 {
 state = 1;
 break;
 }
-i++;
 }
 if (state)
 return (&s[i]);
-return (0);
+return (NULL);
 }
