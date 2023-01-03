@@ -1,16 +1,20 @@
+
 /**
- * _memset - memset
- * @s: s
- * @b: b
- * @n: n
+ * _memset - memset function
+ * @s: string
+ * @b: byte char
+ * @n: number
  *
- * Return: r
+ * Return: returned val
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
+
 unsigned int i;
 
 i = 0;
+
 while (i < n)
 {
 s[i] = b;
