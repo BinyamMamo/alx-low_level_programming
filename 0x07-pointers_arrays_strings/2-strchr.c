@@ -1,5 +1,7 @@
+#include <stdio.h>
+
 /**
- * _strchr) - strchr
+ * _strchr - strchr
  * @s: string
  * @c: char
  *
@@ -23,5 +25,5 @@ i++;
 }
 if (state)
 return (&s[i]);
-return (NULL);
+return (0);
 }
