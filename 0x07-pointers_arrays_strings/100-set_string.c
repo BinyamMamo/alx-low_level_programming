@@ -1,7 +1,7 @@
 /**
  * set_string - string set
  * @s: pointerpointed
- * @to: poibter
+ * @to: pointer
  *
  * Return: Nothing
  */
@@ -15,5 +15,5 @@ while (to[i] != 0)
 *s[i] = to[i];
 i++;
 }
-
+*s[i] = 0;
 }
