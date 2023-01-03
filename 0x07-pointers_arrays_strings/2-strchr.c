@@ -15,15 +15,16 @@ int i, state;
 i = 0;
 state = 0;
 
-for (; !s[i]; i++)
+while (!s[i])
 {
 if (s[i] == c)
 {
 state = 1;
 break;
 }
+i++;
 }
 if (state)
 return (&s[i]);
-return (NULL);
+return (0);
 }
