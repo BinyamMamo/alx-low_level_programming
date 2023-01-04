@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * _strstr - _strstr
  * @haystack: first input
@@ -30,5 +32,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		i++;
 	}
+	if (index == -1)
+		return NULL;
 	return (&haystack[index]);
 }
