@@ -10,10 +10,10 @@ void set_string(char **s, char *to)
 int i;
 
 i = 0;
-while (to[i] != 0)
+while (to[i])
 {
-*s[i] = to[i];
+s[i] = &to[i];
 i++;
 }
-*s[i] = 0;
+&s[i] = &to[i];
 }
