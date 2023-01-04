@@ -26,7 +26,7 @@ char *_strpbrk(char *s, char *accept)
 				break;
 			}
 		}
-		if (index 1= -2)
+		if (index != -2)
 		{
 			break;
 		}
