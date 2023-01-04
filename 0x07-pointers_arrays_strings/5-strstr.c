@@ -10,7 +10,7 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int index, i, j, state;
-	
+
 	index = -1;
 	i = 0;
 	while (haystack[i] != 0)
@@ -33,6 +33,6 @@ char *_strstr(char *haystack, char *needle)
 		i++;
 	}
 	if (index == -1)
-		return NULL;
+		return (NULL);
 	return (&haystack[index]);
 }
