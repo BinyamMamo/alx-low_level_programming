@@ -1,3 +1,4 @@
+
 /**
  * _strstr - _strstr
  * @haystack: first input
