@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * print_diagsums - print_diagsums
  * @a: first input
