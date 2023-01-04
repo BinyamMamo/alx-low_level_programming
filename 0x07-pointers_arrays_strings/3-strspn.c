@@ -7,7 +7,7 @@
  *
  * Return: pointer to string
  */
-char *_strpbrk(char *s, char *accept)
+char *_strspn(char *s, char *accept)
 {
 	unsigned int index, i, j;
 
