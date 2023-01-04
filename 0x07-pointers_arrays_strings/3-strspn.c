@@ -25,7 +25,7 @@ char *_strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if (index != -1)
+		if (index != 0)
 		{
 			break;
 		}
