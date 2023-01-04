@@ -1,35 +1,31 @@
-#include <stdio.h>
-
 /**
- * _strspn - _strspn
- * @s: first input
- * @accept: second input
- *
- * Return: pointer to string
- */
+* _strspn - _strspn
+* @s: first input
+* @accept: second input
+*
+* Return: pointer to string
+*/
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int index, i, j;
 
 	index = 0;
-	i = 0;
-	while (s[i] != 0)
-	{
-		j = 0;
 
-		for (; accept[j] != 0; j++)
+	j = 0;
+	for (; accept[j] != 0; j++)
+	{
+		i = 0;
+		while (s[i] != 0)
 		{
 			if (s[i] == accept[j])
 			{
-				index = i;
+				if (i > index)
+					index = i;
 				break;
 			}
+
+			i++;
 		}
-		if (index != 0)
-		{
-			break;
-		}
-		i++;
 	}
-	return (index);
+	return (index + 1);
 }
