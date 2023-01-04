@@ -14,7 +14,7 @@ int i, state;
 
 i = 0;
 state = 0;
-while (s[i] != 0)
+while (s[i])
 {
 if (s[i] == c)
 {
