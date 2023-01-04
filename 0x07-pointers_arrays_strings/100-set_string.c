@@ -15,5 +15,5 @@ while (to[i])
 s[i] = &to[i];
 i++;
 }
-&s[i] = &to[i];
+s[i] = &to[i];
 }
