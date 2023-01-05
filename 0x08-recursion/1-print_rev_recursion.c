@@ -1,5 +1,7 @@
 #include "main.h"
 
+int len(char *s);
+
 /**
 * _print_rev_recursion - _print_rev_recursion
 * @s: first input
@@ -11,4 +13,21 @@ void _print_rev_recursion(char *s)
 	if (len(s) > 1)
 		_print_rev_recursion(s + len(s) - 1);
 	return;
+}
+
+/**
+* _strlen_recursion - _strlen_recursion
+* @s: first input
+*
+* Return: length of string
+*/
+int len(char *s)
+{
+	int c;
+	
+	c = 0;
+	if (*s != '\0')
+		c = len(s + 1) + 1;
+	
+	return c;
 }
