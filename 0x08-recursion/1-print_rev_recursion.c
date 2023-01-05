@@ -12,11 +12,10 @@ void _print_rev_recursion(char *s)
 	_putchar(*(s + len(s) - 1));
 	if (len(s) > 1)
 		_print_rev_recursion(s + len(s) - 1);
-	return;
 }
 
 /**
-* len_recursion - _strlen_recursion
+* len - _strlen_recursion
 * @s: first input
 *
 * Return: length of string
