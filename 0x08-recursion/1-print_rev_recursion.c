@@ -16,7 +16,7 @@ void _print_rev_recursion(char *s)
 }
 
 /**
-* _strlen_recursion - _strlen_recursion
+* len_recursion - _strlen_recursion
 * @s: first input
 *
 * Return: length of string
@@ -24,10 +24,10 @@ void _print_rev_recursion(char *s)
 int len(char *s)
 {
 	int c;
-	
+
 	c = 0;
 	if (*s != '\0')
 		c = len(s + 1) + 1;
-	
-	return c;
+
+	return (c);
 }
