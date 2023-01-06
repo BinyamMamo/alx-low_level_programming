@@ -11,15 +11,15 @@ char prime(char *str, int x);
 char prime(char *str, int x)
 {
 	int i;
-	
+
 	i = 0;
 	if (*str == 0)
 	{
-		return *(str - x);
+		return (*(str - x));
 	}
-	i = prime(str + 1, x);	
+	i = prime(str + 1, x);
 
-	return i;
+	return (i);
 }
 
 /**
@@ -32,13 +32,14 @@ int is_palindrome(char *s)
 {
 	int i;
 	char c;
+
 	i = 0;
 	if (*s != 0)
 	{
 		i = is_palindrome(s + 1) + 1;
 		c = prime(s, i);
 		if (*s != c)
-			return -1;
+			return (-1);
 	}
 	return (i);
 }
