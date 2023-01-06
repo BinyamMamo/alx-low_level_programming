@@ -19,7 +19,7 @@ int prime(int num, int x)
 			i++;
 		}
 	}
-	return i;
+	return (i);
 }
 
 /**
@@ -31,6 +31,6 @@ int prime(int num, int x)
 int is_prime_number(int n)
 {
 	if (prime(n, n - 1) > 0)
-		return (1);
-	return (0);
+		return (0);
+	return (1);
 }
