@@ -11,7 +11,7 @@ int prime(int num, int x)
 	int i;
 
 	i = 0;
-	if (num == 0 || num == 1)
+	if (num <= 2)
 		return (1);
 	if (x > 1)
 	{
