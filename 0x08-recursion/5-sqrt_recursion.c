@@ -16,8 +16,7 @@ int sqr(int num, int x)
 	{
 		if ((num % x == 0) && (num == (x * x)))
 			return (x);
-		else
-			i = sqr(num, x - 1);
+		i = sqr(num, x + 1);
 	}
 	return (i);
 }
@@ -30,5 +29,5 @@ int sqr(int num, int x)
 */
 int _sqrt_recursion(int n)
 {
-	return (sqr(n, n / 2));
+	return (sqr(n, 2));
 }
