@@ -12,7 +12,7 @@ int sqr(int num, int x)
 	i = -1;
 	if (num == 0 || num == 1)
 		return (num);
-	if (x > 0)
+	if (x > 0 && num > 1)
 	{
 		if ((num % x == 0) && (num == (x * x)))
 			return (x);
