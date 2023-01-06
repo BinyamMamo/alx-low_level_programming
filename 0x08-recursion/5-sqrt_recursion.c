@@ -9,16 +9,13 @@ int sqr(int num, int x)
 {
 	int i;
 
-	i = 0;
+	i = -1;
 	if (num == 0 || num == 1)
-		return (1);
+		return (num);
 	if (x > 0)
 	{
 		if ((num % x == 0) && (num == (x * x)))
-		{
-			i = 1;
-			return (i);
-		}
+			return (x);
 		else
 			i = sqr(num, x - 1);
 	}
