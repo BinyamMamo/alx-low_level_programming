@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", (argv[1] - 48) * (argv[2] - 48));
 	else
 	{
-		printf("error");
+		printf("Error");
 		return (1);
 	}
 	return (0);
