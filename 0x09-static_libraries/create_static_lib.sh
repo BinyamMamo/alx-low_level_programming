@@ -1,2 +1,3 @@
 #!/bin/bash
-ar rc libutil.a *.o
+gcc -c *.c
+ar rc liball.a *.o
