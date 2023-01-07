@@ -2,8 +2,8 @@
 
 /**
  * main - Entry point of the program
- * argc: argument count
- * argv: argument array
+ * @argc: argument count
+ * @argv: argument array
  *
  * Return: always 0
  */
