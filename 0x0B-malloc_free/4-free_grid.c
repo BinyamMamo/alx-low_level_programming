@@ -12,9 +12,6 @@ void free_grid(int **grid, int height)
 {
 int i, j, width;
 
-if (grid == NULL)
-return (NULL);
-
 width = sizeof(grid) / (sizeof(int) * height);
 for (i = 0; i < height; i++)
 {
