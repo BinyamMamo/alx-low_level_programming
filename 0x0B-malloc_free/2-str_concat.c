@@ -14,6 +14,8 @@ char *str_concat(char *s1, char *s2)
 int i, c, j;
 char *s;
 
+if (s1 == NULL || s2 == NULL)
+return (NULL);
 c = 0;
 while (s1[c] != 0)
 c++;
@@ -33,7 +35,7 @@ while (s1[i] != 0)
 s[i] = s1[i];
 i++;
 }
-j = i - 1;
+j = i;
 i = 0;
 while (s2[i] != 0)
 {
