@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * argstostr - converts arguments to str
  * @ac: argument count
@@ -23,10 +22,10 @@ char *argstostr(int ac, char **av)
 		c++;
 	}
 
-	str = malloc(sizeof(char) * c);
+	str = malloc((sizeof(char) * c) + 1);
 
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 
 	i = 0;
 	c = 0;
@@ -42,6 +41,6 @@ char *argstostr(int ac, char **av)
 		str[c] = '\n';
 		c++;
 	}
-
-	return str;
+	str[c] = '\0';
+	return (str);
 }
