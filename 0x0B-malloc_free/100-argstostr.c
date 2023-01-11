@@ -13,6 +13,7 @@ char *argstostr(int ac, char **av)
 {
 	char *str, *s, *f;
 	int i, c, j;
+
 	if (ac == 0 || av == NULL)
 	{
 		f = "Failed\n";
@@ -21,7 +22,7 @@ char *argstostr(int ac, char **av)
 			str[i] = f[i];
 		str[i] = '\0';
 		return (str);
-  }
+	}
 	c = 0;
 	for (i = 0; i < ac; i++)
 	{
