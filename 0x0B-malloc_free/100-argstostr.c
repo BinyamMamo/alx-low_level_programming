@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -10,9 +11,19 @@
 
 char *argstostr(int ac, char **av)
 {
-	char *str, *s;
+	char *str, *s, *f;
 	int i, c, j;
 
+  if (ac == 0 || av == NULL)
+  {
+  	f = "Failed\n";
+		str = malloc((sizeof(char) * 8));
+
+		for (i = 0; i < 8; i++)
+			str[i] = f[i];
+		str[i] = '\0';
+  	return (str);
+  }
 	c = 0;
 	for (i = 0; i < ac; i++)
 	{
