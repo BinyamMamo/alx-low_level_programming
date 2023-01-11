@@ -21,7 +21,7 @@ while (s2[c] != 0)
 c++;
 
 if (c == 0)
-return (s);
+return (NULL);
 
 s = malloc(c + 1);
 
