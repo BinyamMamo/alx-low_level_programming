@@ -3,6 +3,7 @@
 
 /**
  * free_grid - creates an array
+ * @grid: grid
  * @height: the value to initialise the array with
  *
  * Return: nothing
@@ -20,5 +21,4 @@ for (j = 0; j < width; j++)
 free(&grid[i][j]);
 }
 }
-
 }
