@@ -26,7 +26,7 @@ return (s);
 s = malloc(c + 1);
 
 if (s == NULL)
-return (NULL):
+return (NULL);
 i = 0;
 while (s1[i] != 0)
 {
