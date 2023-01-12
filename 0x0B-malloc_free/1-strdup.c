@@ -10,37 +10,44 @@
 
 char *_strdup(char *str)
 {
-int i, c;
-char *s;
-if (str[0] == '\0')
-{
-s = malloc(1);
-s[0] = '\0';
-return (s);
+	int i, c;
+	char *s, *f;
+	if (str[0] == '\0')
+	{
+		s = malloc(1);
+		s[0] = '\0';
+		return (s);
+	}
+
+	if (str == NULL)
+	{
+		f = "failed to allocate memory\n";
+		str = malloc((sizeof(char) * 25));
+		for (i = 0; f[i] != 0; i++)
+			str[i] = f[i];
+		str[i] = '\0';
+		return (str);
+	}
+
+	c = 0;
+	while (str[c] != 0)
+		c++;
+
+	if (c == 0)
+		return (NULL);
+
+	s = malloc(c + 1);
+
+	if (s == NULL)
+		return (NULL);
+	i = 0;
+	while (str[i] != 0)
+	{
+		s[i] = str[i];
+		i++;
+	}
+
+	s[i] = 0;
+
+	return (s);
 }
-if (str == NULL)
-return (NULL);
-
-c = 0;
-while (str[c] != 0)
-c++;
-
-if (c == 0)
-return (NULL);
-
-s = malloc(c + 1);
-
-if (s == NULL)
-return (NULL);
-i = 0;
-while (str[i] != 0)
-{
-s[i] = str[i];
-i++;
-}
-
-s[i] = 0;
-
-return (s);
-}
-
