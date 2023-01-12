@@ -12,6 +12,7 @@ char *_strdup(char *str)
 {
 	int i, c;
 	char *s, *f;
+
 	if (str[0] == '\0')
 	{
 		s = malloc(1);
@@ -20,14 +21,7 @@ char *_strdup(char *str)
 	}
 
 	if (str == NULL)
-	{
-		f = "failed to allocate memory\n";
-		str = malloc((sizeof(char) * 25));
-		for (i = 0; f[i] != 0; i++)
-			str[i] = f[i];
-		str[i] = '\0';
-		return (str);
-	}
+		return (NULL);
 
 	c = 0;
 	while (str[c] != 0)
