@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mianhtml</title>
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.cont{
+		display: block;
+		width: 20rem;
+		margin: 1rem;
+	}
+	input[type="text"]{
+		font-family: monospace;
+		display: block;
+		font-size: 1rem;
+		width: 20rem;
+		padding: 0.5rem;
+		border: 1px solid #4447;
+		margin-bottom: 1rem;
+		color: #4449;
+	}
+	input[type="text"]:focus{
+		outline: none;
+		color: #44f;
+		border: solid 2px #22f;
+		font-size: 1.25rem;
+		padding: 0.5rem;
+		background-color: #ccf;
+		opacity: 0.5;
+	}
+
+	input[name="click"]{
+		font-family: monospace;
+		display: block;
+		width: 8rem;
+		font-size: 1.5rem;
+		background-color: #88f;
+		border: none;
+		padding: 0.25rem 0.1rem;
+		color: #fffc;
+		border-radius: 0.25rem;
+		margin-left: 12.25rem;
+		margin-top: 1rem;
+		cursor: pointer;
+	}
+
+	input[name="click"]:hover{
+		opacity: 0.75;
+	}
+	label{
+		display: block;
+		color: #777;
+		/*font-weight: bold;*/
+		font-size: 1.25rem;
+		font-family: monospace;
+	}
+	.over{
+		display: block;
+		position: fixed;
+		width: 100vw;
+		height: 4rem;
+		background-color: #44f;
+		border: none;
+		font-size: 2.5rem;
+		color: #fffe;
+		bottom: 0;
+		cursor: pointer;
+	}
+	textarea{
+		padding: 1rem;
+		width: 20rem;
+		height: 5rem;
+		background-color: #ccf;
+	}
+	.dnt{
+		all: unset;
+		font-family: monospace;
+		display: block;
+		width: 20rem;
+		height: 2rem;
+		padding: 0.5rem;
+		border: 1px solid #4447;
+		margin-bottom: 1rem;
+		color: #4449;
+		resize: vertical;
+	}
+	.dnt:focus{
+		border-color: #449;
+	}
+	::placeholder{
+		color: #4444;
+	}
+</style>
+<body>
+<div class="cont">
+	<label>labeled:</label>
+	<input type="text" id="input" maxlength="80">
+	<input type="button" name="click" value="Click me" id="clickme" onclick="run(this)">
+</div>
+<div class="cont" id="output" style="display: none">
+</div>
+<button class="over" id="over" onclick="com()" style="display: none;">C</button>
+</body>
+<script type="text/javascript">
+	var arg = 0;
+	function run(btn) {
+		btn.parentElement.style.display = "none";
+		var input = btn.previousElementSibling.value;
+		if(input.length <= 2)
+			input = "int main(void)";
+		var ret = input.split(" ")[0];
+		var fun = input.split(" ")[1].split("(")[0];
+		var all = input.substring(input.indexOf('(')+1,  input.indexOf(')'));
+		all = all.replace(/, /g,",");
+		all = all.split(',');
+
+		var container = document.getElementById("output");
+
+		var label = document.createElement("label");
+		label.innerHTML = fun;
+		container.appendChild(label);
+		var description = document.createElement("textarea");
+		description.className = "dnt";
+		description.id = "fun";
+		description.value = fun;
+		description.placeholder = fun;
+		if(fun == "main")
+		{
+			description.value = "Entry point of the program";
+			description.placeholder = "Entry point of the program";
+		}
+		container.appendChild(description);
+
+		var ordinals = ["first", "second", "third", "fourth", "fifth"];
+		
+		if(all.length == 1 && all[0] == ""){
+			// do nothing
+		} else
+		for (var i = 0; i < all.length; i++) {
+			label = document.createElement("label");
+			if(all[i] == "void")
+			{
+				label.innerHTML = "!!no arguments!!<br><br>";
+				container.appendChild(label);
+				continue;
+			}
+			label.innerHTML = all[i].split(" ")[1];
+			container.appendChild(label);
+			description = document.createElement("textarea");
+			// description.id = "arg" + i;
+			description.className = "dnt args";
+			description.value = ordinals[i] + " input";
+			description.placeholder = ordinals[i] + " input";
+			container.appendChild(description);
+		}
+
+		label = document.createElement("label");
+		label.innerHTML = "Return:";
+		container.appendChild(label);
+		description = document.createElement("textarea");
+		description.className = "dnt";
+		description.placeholder = ret;
+		if(fun == "main")
+		{
+			description.value = "0 always";
+			description.placeholder = "0 always";
+		}
+		if(ret == "void"){
+			description.value = "nothing";
+			description.placeholder = "nothing";
+		}
+		description.id = "ret";
+		container.appendChild(description);
+		var dnts = document.getElementsByClassName("dnt");
+		for (var i = 0; i < dnts.length; i++) {
+			dnts[i].addEventListener('input', function(event){
+			   validate(this);
+			});
+		}
+
+		container.style.display = "block";
+		document.getElementById("over").style.display = "block";
+		com();
+	}
+
+	function com() {
+		var output = "";
+
+		if(document.getElementById("textarea") != null)
+		{
+			var textarea = document.getElementById("textarea");
+			textarea.remove();
+		}
+
+		var fun = document.getElementById("fun");
+		var funName = fun.previousElementSibling.innerText;
+		var ret = document.getElementById("ret");
+		var args = document.getElementsByClassName("args");
+
+		if(fun.value.length <= 2)
+			output = "/**\n * " + funName + " - " + fun.placeholder + "\n";
+		else
+			output = "/**\n * " + funName + " - " + fun.value + "\n";
+		
+		for (var i = 0; i < args.length; i++) {
+			var label = args[i].previousElementSibling;
+			output = output + " * @" + label.innerText + ": " + args[i].value + "\n";
+		}
+		output = output + " * Return: " + ret.value + "\n */";
+
+		var container = document.getElementById("output");
+
+		var outputElement = document.createElement("textarea");
+		outputElement.innerHTML = output;
+		outputElement.id = "textarea";
+		container.appendChild(outputElement);
+
+		navigator.clipboard.writeText(output);
+	}
+	function validate(textarea) {
+		var len = 1;
+		var text = textarea.value;
+		var text = text.split("\n");
+		for (var i = 0; i < text.length; i++) {
+			if(text[i].length > 80)
+			{
+				len = len * 0;
+				break;
+			}
+		}
+		if(!len){
+			textarea.style.color = "red";
+		} else{
+			textarea.style.color = "#449";			
+		}
+		console.log(text.length);
+	}
+	var input = document.getElementById("input");
+	input.addEventListener('keydown', (event) => {
+		if(event.key === "Enter")
+			document.getElementById("clickme").click();
+	});
+
+	window.onload = function(){
+		document.getElementById("input").focus();
+	}
+</script>
+</html>
