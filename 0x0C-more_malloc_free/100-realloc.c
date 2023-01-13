@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * _realloc - custom made realloc function
+ * @ptr: the address of the dynamic memory to realloc
+ * @old_size: previuous size
+ * @new_size: new size
+ * Return: void pointer to the realloced address
+ */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *mem;
