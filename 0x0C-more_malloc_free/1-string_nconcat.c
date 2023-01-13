@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 /**
- * str_concat - concatenates two string arrays
+ * string_nconcat - concatenates two string arrays
  * @s1: first string to concatenate
  * @s2: second string to concatenate
+ * @n: the number of strings to copy from string two
  *
  * Return: a pointer to the concatenated string
  */
