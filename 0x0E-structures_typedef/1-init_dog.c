@@ -1,3 +1,5 @@
+#include <string.h>
+
 /**
  * init_dog - initializes a dog structure
  * @d: a dog structure
@@ -9,7 +11,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d->name = name;
+	strcpy(d->name, name);
 	d->age = age;
-	d->owner = owner;
+	strcpy(d->owner, owner);
 }
