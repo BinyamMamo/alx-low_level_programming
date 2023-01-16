@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include "dog.h"
 
-dog_t d;
-
 /**
  * new_dog - create a new dog structure
  * @name: the name of the dog
@@ -14,7 +12,7 @@ dog_t d;
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-
+	dog_t d;
 	d.name = malloc(sizeof(char) * (strlen(name) + 1));
 	if (d.name == NULL)
 		return (NULL);
