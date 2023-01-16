@@ -8,7 +8,7 @@
  *
  * Description: creates a dog object with his name, his age and owner name
  */
-struct dog
+struct dog_t
 {
 	char *name;
 	float age;
