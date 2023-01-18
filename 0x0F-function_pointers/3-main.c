@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	printf("arg: %s\n", argv[2]);
 	printf("arg: %s\n", argv[3]);
 	func = get_op_func(argv[2]);
-	if (argc != 4)
+	if (argc != 4 || argv == NULL)
 	{
 		printf("Error\n");
 		exit(98);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		exit(99);
 		return (1);
 	}
-	if (argv[2][0] == '/' || argv[2][0] == '%' && atoi(argv[3]) == 0)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && (atoi(argv[3]) == 0))
 	{
 		printf("Error\n");
 		exit(100);
