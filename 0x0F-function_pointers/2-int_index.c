@@ -1,4 +1,4 @@
-
+#include "function_pointers.h"
 /**
  * int_index - int index
  * @array: first input
@@ -11,6 +11,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
+	if (array == NULL || size <= 0 || cmp == NULL)
+		return;
 	if (size <= 0)
 		return (-1);
 
