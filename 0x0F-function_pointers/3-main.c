@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "3-calc.h"
 
@@ -13,10 +14,6 @@ int main(int argc, char *argv[])
 {
 	int (*func)(int, int);
 
-	printf("arg: %s\n", argv[0]);
-	printf("arg: %s\n", argv[1]);
-	printf("arg: %s\n", argv[2]);
-	printf("arg: %s\n", argv[3]);
 	func = get_op_func(argv[2]);
 	if (argc != 4 || argv == NULL)
 	{
@@ -30,7 +27,7 @@ int main(int argc, char *argv[])
 		exit(99);
 		return (1);
 	}
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && (atoi(argv[3]) == 0))
+	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) && (atoi(argv[3]) == 0))
 	{
 		printf("Error\n");
 		exit(100);
