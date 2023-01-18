@@ -12,6 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
+	int n3 = 0;
 	int (*func)(int, int);
 
 	func = get_op_func(argv[2]);
@@ -27,7 +28,8 @@ int main(int argc, char *argv[])
 		exit(99);
 		return (1);
 	}
-	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) && (atoi(argv[3]) == 0))
+	n3 = atoi(argv[3]);
+	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) && (n3 == 0))
 	{
 		printf("Error\n");
 		exit(100);
