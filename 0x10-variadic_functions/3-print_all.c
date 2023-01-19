@@ -26,7 +26,7 @@ void print_all(const char *const format, ...)
 		i++;
 		if (strchr(str, format[i]) == NULL)
 			continue;
-		else
+		if (strchr(str, format[i]) != NULL)
 			sep(i);
 		switch (format[i])
 		{
