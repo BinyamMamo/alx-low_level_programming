@@ -13,21 +13,12 @@ void print_all(const char *const format, ...)
 {
 	int i = 0;
 	va_list args;
-	char *s;
-	char *str = "cifs";
+	char *s, *str = "cifs";
 
 	switch (format == NULL)
-	{
 	case 1:
 		return;
-		break;
-	case 0:
-		break;
-	}
-
 	va_start(args, format);
-
-	i = 0;
 	while (format[i] != 0)
 	{
 		if (strchr(str, format[i]) == NULL)
@@ -48,28 +39,16 @@ void print_all(const char *const format, ...)
 			break;
 		case 's':
 			s = va_arg(args, char *);
-			switch (s == NULL)
-			{
-			case 1:
+			if (s == NULL)
 				printf("(nil)");
-				break;
-			case 0:
+			else
 				printf("%s", s);
-				break;
-			}
-			break;
 		}
 		switch (format[i + 1] != 0)
-		{
-		case 0:
-			break;
 		case 1:
 			printf(", ");
-			break;
-		}
 		i++;
 	}
-
 	printf("\n");
 	va_end(args);
 }
