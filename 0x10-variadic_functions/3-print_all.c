@@ -13,7 +13,11 @@ void print_all(const char *const format, ...)
 {
 	int i = 0;
 	va_list args;
+	char *s;
 	char *str = "cifs";
+
+	if (format == NULL)
+		return;
 
 	va_start(args, format);
 
@@ -34,7 +38,11 @@ void print_all(const char *const format, ...)
 			printf("%f", va_arg(args, double));
 			break;
 		case 's':
-			printf("%s", va_arg(args, char *));
+			s = va_arg(args, char *);
+			if (s == NULL)
+				printf("(nil)");
+			else
+				printf("%s", s);
 			break;
 		}
 		if (format[i + 1] != 0)
