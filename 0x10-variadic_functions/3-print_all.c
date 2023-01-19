@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdarg.h>
 
-void sep(const char *format, int i);
+void sep(int i);
 
 /**
  * print_all - print all
@@ -21,11 +21,13 @@ void print_all(const char *const format, ...)
 	case 1:
 		return;
 	va_start(args, format);
-	while (format[i] != 0 || i == -1)
+	while (format[i + 1] != 0)
 	{
 		i++;
 		if (strchr(str, format[i]) == NULL)
 			continue;
+		else
+			sep(i);
 		switch (format[i])
 		{
 		case 'c':
@@ -48,21 +50,19 @@ void print_all(const char *const format, ...)
 				printf("%s", s);
 			}
 		}
-		sep(format, i);
 	}
 	printf("\n");
 	va_end(args);
 }
 /**
  * sep - sep
- * @format: first input
  * @i: second input
  *
  * Return: nothing
  */
-void sep(const char *format, int i)
+void sep(int i)
 {
-	switch (format[i + 1] != 0)
+	switch (i != 0)
 	case 1:
 		printf(", ");
 }
