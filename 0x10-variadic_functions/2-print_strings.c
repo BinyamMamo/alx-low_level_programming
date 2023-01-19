@@ -2,14 +2,14 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - print numbers
+ * print_strings - print strings
  * @separator: first input
  * @n: second input
  * @...: third input
  *
  * Return: nothing
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
 	va_list args;
@@ -22,12 +22,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-		str = va_arg(args, int);
+		str = va_arg(args, char *);
 
 		if (str == NULL)
 			printf("(nil)");
 		else
-			printf("%d", );
+			printf("%s", str);
 
 		if (i != n - 1)
 			printf("%s", separator);
