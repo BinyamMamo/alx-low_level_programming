@@ -7,6 +7,7 @@
  */
 int main(int argc, char const *argv[])
 {
-	printf("%x\n", &main);
+	int x;
+	printf("%x\n", &x);
 	return (0);
 }
