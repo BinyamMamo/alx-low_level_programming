@@ -2,11 +2,12 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - sum them all
- * @n: first input
- * @...: second input
+ * print_numbers - print numbers
+ * @separator: first input
+ * @n: second input
+ * @...: third input
  *
- * Return: int
+ * Return: nothing
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
