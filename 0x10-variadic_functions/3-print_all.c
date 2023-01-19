@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdarg.h>
 
+void sep(const char *format, int i);
+
 /**
  * print_all - print all
  * @format: first input
@@ -15,6 +17,9 @@ void print_all(const char *const format, ...)
 	va_list args;
 	char *s, *str = "cifs";
 
+	switch (format == NULL)
+	case 1:
+		return;
 	va_start(args, format);
 	while (format[i] != 0 || i == -1)
 	{
@@ -43,10 +48,21 @@ void print_all(const char *const format, ...)
 				printf("%s", s);
 			}
 		}
-		switch (format[i + 1] != 0)
-		case 1:
-			printf(", ");
+		sep(format, i);
 	}
 	printf("\n");
 	va_end(args);
+}
+/**
+ * sep - sep
+ * @format: first input
+ * @i: second input
+ *
+ * Return: nothing
+ */
+void sep(const char *format, int i)
+{
+	switch (format[i + 1] != 0)
+	case 1:
+		printf(", ");
 }
