@@ -15,9 +15,6 @@ void print_all(const char *const format, ...)
 	va_list args;
 	char *s, *str = "cifs";
 
-	switch (format == NULL)
-	case 1:
-		return;
 	va_start(args, format);
 	while (format[i] != 0 || i == -1)
 	{
