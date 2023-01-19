@@ -48,10 +48,15 @@ void print_all(const char *const format, ...)
 			break;
 		case 's':
 			s = va_arg(args, char *);
-			if (s == NULL)
+			switch (s == NULL)
+			{
+			case 1:
 				printf("(nil)");
-			else
+				break;
+			case 0:
 				printf("%s", s);
+				break;
+			}
 			break;
 		}
 		switch (format[i + 1] != 0)
