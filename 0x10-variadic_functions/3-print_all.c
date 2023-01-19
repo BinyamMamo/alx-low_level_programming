@@ -17,7 +17,8 @@ void print_all(const char *const format, ...)
 
 	va_start(args, format);
 
-	for (i = 0; format[i] != 0; i++)
+	i = 0;
+	while (format[i] != 0)
 	{
 		if (strchr(str, format[i]) == NULL)
 			continue;
@@ -38,6 +39,7 @@ void print_all(const char *const format, ...)
 		}
 		if (format[i + 1] != 0)
 			printf(", ");
+		i++;
 	}
 
 	printf("\n");
