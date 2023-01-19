@@ -7,11 +7,11 @@
  *
  * Return: int
  */
-int sum_them_all(unsigned int n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i;
 	unsigned int sum = 0;
-	unsigned int *ptr = &n;
+	const unsigned int *ptr = &n;
 
 	if (n == 0)
 		return (0);
