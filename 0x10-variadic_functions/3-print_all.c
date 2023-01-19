@@ -25,7 +25,10 @@ void print_all(const char *const format, ...)
 	while (format[i] != 0)
 	{
 		if (strchr(str, format[i]) == NULL)
+		{
+			i++;
 			continue;
+		}
 		switch (format[i])
 		{
 		case 'c':
