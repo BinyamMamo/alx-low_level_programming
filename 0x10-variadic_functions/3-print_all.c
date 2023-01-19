@@ -16,8 +16,12 @@ void print_all(const char *const format, ...)
 	char *s;
 	char *str = "cifs";
 
-	if (format == NULL)
+	switch (format[0])
+	{
+	case '\0':
 		return;
+		break;
+	}
 
 	va_start(args, format);
 
@@ -48,8 +52,14 @@ void print_all(const char *const format, ...)
 				printf("%s", s);
 			break;
 		}
-		if (format[i + 1] != 0)
+		switch (format[i + 1] != 0)
+		{
+		case 1:
+			break;
+		case 0:
 			printf(", ");
+			break;
+		}
 		i++;
 	}
 
