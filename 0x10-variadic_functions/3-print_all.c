@@ -16,10 +16,12 @@ void print_all(const char *const format, ...)
 	char *s;
 	char *str = "cifs";
 
-	switch (format[0])
+	switch (format == NULL)
 	{
-	case '\0':
+	case 1:
 		return;
+		break;
+	case 0:
 		break;
 	}
 
@@ -54,9 +56,9 @@ void print_all(const char *const format, ...)
 		}
 		switch (format[i + 1] != 0)
 		{
-		case 1:
-			break;
 		case 0:
+			break;
+		case 1:
 			printf(", ");
 			break;
 		}
