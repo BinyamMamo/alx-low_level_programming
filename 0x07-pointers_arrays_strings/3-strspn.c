@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
-* _strspn - _strspn
-* @s: first input
-* @accept: second input
-*
-* Return: pointer to string
-*/
+ * _strspn - _strspn
+ * @s: first input
+ * @accept: second input
+ *
+ * Return: pointer to string
+ */
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int index, i, j;
@@ -24,7 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (accept[j] == s[i])
 			{
 				if (i >= index)
-				index = i;
+					index = i;
 				break;
 			}
 		}
