@@ -11,6 +11,9 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int index, i, j;
 
+	if (s == NULL || accept == NULL)
+		return (0);
+
 	index = 0;
 	j = 0;
 	while (accept[j] != 0)
