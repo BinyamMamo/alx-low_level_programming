@@ -1,45 +1,42 @@
 #include <stdio.h>
 
-char prime(char *str, int x);
+int len(char *str);
+int pass(char *, int, int);
 
 /**
-* prime - prime
-* @str: first input
-* @x: second input
-* Return: number of factors
-*/
-char prime(char *str, int x)
+ * is_palindrome - is_palindrome
+ * @s: first input
+ *
+ * Return: palindrome
+ */
+int is_palindrome(char *s)
 {
-	int i;
-
-	i = 0;
-	if (*str == 0)
-	{
-		return (*(str - x));
-	}
-	i = prime(str + 1, x);
-
-	return (i);
+	return (pass(s, (len(s) - 1)/2, 0));
 }
 
 /**
-* is_palindrome - is_palindrome
-* @s: first input
-*
-* Return: palindrome
-*/
-int is_palindrome(char *s)
+ * len - finds the length of a string
+ * @str: a character array to store the input
+ * Return: the length of str
+ */
+int len(char *str)
 {
-	int i;
-	char c;
+	int c = 0;
 
-	i = 0;
-	if (*s != 0)
+	while (str[c] != '\0')
 	{
-		i = is_palindrome(s + 1) + 1;
-		c = prime(s, i);
-		if (*s != c)
-			return (-1);
+		c++;
 	}
-	return (i);
+	return (c);
+}
+
+int pass(char *str, int c, int x)
+{
+
+	if (str[c + x] == str[c - x])
+	{
+		x = pass(str, c, x++);
+		return (x);
+	}
+	return (0);
 }
