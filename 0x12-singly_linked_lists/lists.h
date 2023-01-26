@@ -1,7 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
-
-typedef unsigned int size_t;
+#include <stdio.h>
 
 /**
  * struct list_s - singly linked list
