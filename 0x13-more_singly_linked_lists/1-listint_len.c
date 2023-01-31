@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 /**
  * listint_len - returns the length of a linked list
@@ -9,7 +6,7 @@
  *
  * Return: the length of the linked list
  */
-size_t listint_len(const listint_t *h);
+size_t listint_len(const listint_t *h)
 {
 	size_t len = 0;
 	listint_t *temp = (listint_t *)h;
