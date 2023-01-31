@@ -4,23 +4,31 @@
 #include <string.h>
 
 /**
- * add_nodeint - adds a member to the linked list
+ * add_node_end - adds a member at the end of the linked list
  * @head: the linked list
  * @n: integer to store in the new member
  *
  * Return: the modified version of the linked list
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *node;
+	listint_t *node = NULL, *loop = *head;
+
+	if (*head != NULL)
+		while (loop->next != NULL)
+			loop = loop->next;
 
 	node = malloc(sizeof(listint_t));
 	if (node == NULL)
 		return (NULL);
 
 	node->n = n;
-	node->next = *head;
+	node->next = NULL;
 
-	*head = node;
+	if (*head == NULL)
+		*head = node;
+	else
+		loop->next = node;
+
 	return (node);
 }

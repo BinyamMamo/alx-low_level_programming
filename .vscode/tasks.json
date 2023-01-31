@@ -4,6 +4,15 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "start 🚩",
+			"type": "shell",
+			"command": "start ${fileBasename}",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": []
+		}
+		{
 			"label": "clear ✨",
 			"type": "shell",
 			"command": "clear",
