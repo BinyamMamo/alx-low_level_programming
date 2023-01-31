@@ -10,17 +10,17 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t len = 0;
-	listint_t *head = (listint_t *)h;
+	listint_t *h = (listint_t *)head;
 
-	if (head == 0)
+	if (h == 0)
 	{
 		exit(98);
 	}
 
-	while (head != 0)
+	while (h != 0)
 	{
-		printf("%d\n", head->n);
-		head = head->next;
+		printf("%d\n", h->n);
+		h = h->next;
 		len++;
 	}
 
