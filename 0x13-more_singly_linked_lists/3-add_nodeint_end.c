@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * add_node_end - adds a member at the end of the linked list
+ * add_nodeint_end - adds a member at the end of the linked list
  * @head: the linked list
  * @n: integer to store in the new member
  *
