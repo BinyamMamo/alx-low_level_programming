@@ -51,6 +51,15 @@
 		{
 			"label": "push🤜",
 			"type": "shell",
+			"presentation": {
+				"echo": false,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"close": true,
+				"clear": true
+			},
 			"command": "../run",
 			"options": {
 				"cwd": "${fileDirname}"
