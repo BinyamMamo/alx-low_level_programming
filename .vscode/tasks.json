@@ -57,7 +57,7 @@
 				"focus": true,
 				"panel": "shared",
 				"showReuseMessage": false,
-				"close": false,
+				"close": true,
 				"clear": true
 			},
 			"command": "../run",
