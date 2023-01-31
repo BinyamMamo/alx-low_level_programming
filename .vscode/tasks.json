@@ -4,6 +4,15 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "run🏃‍♂️",
+			"type": "shell",
+			"command": "clear && gcc ${fileBasename} && ./a",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": []
+		},
+		{
 			"label": "push🤜",
 			"type": "shell",
 			"command": "../run",

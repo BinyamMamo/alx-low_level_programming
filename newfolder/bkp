@@ -1,0 +1,7 @@
+<button style="float: right; background-color: light-grey; border-radius: 0.5rem; border: 1px solid; border-color: lightgrey; color: grey; border-left: none; cursor: pointer;" onclick="navigator.clipboard.writeText(5)">copy</button>
+
+### ***```Repo:```***
+
+* GitHub repository: ```alx-low_level_programming```
+* Directory: ```0x13-more_singly_linked_lists```
+* File: ```0-print_listint.c```

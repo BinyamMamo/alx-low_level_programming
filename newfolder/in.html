@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html lang="en">
 
 <head>
@@ -12,9 +12,22 @@
 	<div>
 		Header of the content
 	</div>
+	<p>In this following code, what is the value of <code>a[1][1]</code>?</p>
+
+	<pre><code>int a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};
+		</code></pre>
 	<div>
 		Content of the file.
 	</div>
 </body>
 
 </html>
+
+<script>
+	window.addEventListener("load", function () {
+		alert("hi");
+		document.getElementsByTagName("code")[0].innerHTML = "```\n" + document.getElementsByTagName("code")[0].innerHTML + "\n```\n";
+		document.body.innerHTML = "<pre>" + document.body.innerText + "</pre>";
+		alert("hi");
+	});
+</script>
