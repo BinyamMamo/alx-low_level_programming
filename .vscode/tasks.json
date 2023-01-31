@@ -4,6 +4,33 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "clear ✨",
+			"type": "shell",
+			"command": "clear",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "betty 👩",
+			"type": "shell",
+			"command": "clear && betty ${fileBasename}",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Run 🏃‍♂️🏃‍♂️",
+			"type": "shell",
+			"command": "clear && gcc -Wall -pedantic -Werror -Wextra -std=gnu89 main.c ${fileBasename} && ./a",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": []
+		},
+		{
 			"label": "run🏃‍♂️",
 			"type": "shell",
 			"command": "clear && gcc ${fileBasename} && ./a",
