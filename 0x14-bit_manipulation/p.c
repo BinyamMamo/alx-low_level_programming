@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 /**
  * print_binary - print binary
@@ -8,7 +9,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i, state = 0;
+	int i, state = 0, len = 1;
 
 	if (n <= 1)
 	{
@@ -16,11 +17,13 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (i = 63; i > 0; i--)
+	len = (int)log2((double)n);
+
+	for (i = len; i >= 0; i--)
 	{
 		if (get_bit(n, i))
-			state = ~state;
-		if (state == 1)
+			state = 1;
+		if (state)
 			_putchar(48 + get_bit(n, i));
 	}
 }
