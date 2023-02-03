@@ -11,31 +11,49 @@
 				"cwd": "${fileDirname}"
 			},
 			"problemMatcher": []
-		}
-		{
-			"label": "clear ✨",
-			"type": "shell",
-			"command": "clear",
-			"options": {
-				"cwd": "${fileDirname}"
-			},
-			"problemMatcher": []
 		},
+		// {
+		// 	"label": "clear ✨",
+		// 	"type": "shell",
+		// 	"command": "clear",
+		// 	"options": {
+		// 		"cwd": "${fileDirname}"
+		// 	},
+		// 	"problemMatcher": []
+		// },
 		{
 			"label": "betty 👩",
 			"type": "shell",
-			"command": "clear && betty ${fileBasename}",
+			"command": "betty ${fileBasename}",
 			"options": {
 				"cwd": "${fileDirname}"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": true,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"close": false,
+				"clear": true
 			},
 			"problemMatcher": []
 		},
 		{
 			"label": "Run 🏃‍♂️🏃‍♂️",
 			"type": "shell",
-			"command": "clear && gcc -Wall -pedantic -Werror -Wextra -std=gnu89 main.c ${fileBasename} && ./a",
+			"command": "gcc -Wall -pedantic -Werror -Wextra -std=gnu89 main.c ${fileBasename} && ./a",
 			"options": {
 				"cwd": "${fileDirname}"
+			},
+			"presentation": {
+				"echo": false,
+				"reveal": "always",
+				"focus": true,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"close": false,
+				"clear": true
 			},
 			"problemMatcher": []
 		},
@@ -45,6 +63,15 @@
 			"command": "clear && gcc ${fileBasename} && ./a",
 			"options": {
 				"cwd": "${fileDirname}"
+			},
+			"presentation": {
+				"echo": false,
+				"reveal": "always",
+				"focus": true,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"close": false,
+				"clear": true
 			},
 			"problemMatcher": []
 		},
