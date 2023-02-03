@@ -12,5 +12,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 int get_endianness(void);
 uint pw(uint n, uint p);
+int _putchar(char c);
 
 #endif
