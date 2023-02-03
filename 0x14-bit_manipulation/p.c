@@ -10,9 +10,9 @@ void print_binary(unsigned long int n)
 {
 	int i, state = 0;
 
-	if (n == 0)
+	if (n <= 1)
 	{
-		_putchar(0);
+		_putchar(48 + n);
 		return;
 	}
 
