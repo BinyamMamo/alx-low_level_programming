@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 	int i;
 
 	for (i = 0; i < 32; i++)
-		printf("%d", get_bit(n, i));
+		print_uint(get_bit(n, i));
 }
 
 /**
