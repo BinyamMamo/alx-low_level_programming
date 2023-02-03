@@ -14,7 +14,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	uint i, b = 0;
 
-	for (i = 0; i < 32; i++)
+	for (i = 0; i < 64; i++)
 		if (get_bit(n, i) ^ get_bit(m, i))
 			b++;
 
@@ -30,5 +30,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	return (index >= 32 ? -1 : n && (n & (1 << index)));
+	return (index >= 64 ? -1 : n && (n & (1 << index)));
 }
