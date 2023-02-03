@@ -1,13 +1,9 @@
 #include "main.h"
 #include <string.h>
 
-typedef unsigned int uint;
-uint pw(uint n, uint p);
-unsigned int binary_to_uint(const char *b);
-
 /**
- * int - int
- * @char: first input
+ * binary_to_uint - binary to uint
+ * @b: first input
  *
  * Return: unsigned
  */

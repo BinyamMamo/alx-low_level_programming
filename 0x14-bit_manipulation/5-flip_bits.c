@@ -1,11 +1,9 @@
 #include "main.h"
 
-typedef unsigned long int ulint;
-
 /**
  * flip_bits - calculates number of bits needed to
- * 							flip from the first argument to get to
- * 							the second parameter.
+ *							flip from the first argument to get to
+ *							the second parameter.
  * @n: first number
  * @m: second number
  *
