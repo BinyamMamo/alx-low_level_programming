@@ -12,23 +12,14 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	uint i, b = 0;
+	uint i, xor = n ^ m, b;
 
-	for (i = 0; i < 64; i++)
-		if (get_bit(n, i) ^ get_bit(m, i))
+	while (xor)
+	{
+		if (xor&0x01)
 			b++;
+		xor = xor >> 1;
+	}
 
 	return (b);
-}
-
-/**
- * get_bit - get bit at any specified index
- * @n: first input
- * @index: second input
- *
- * Return: the bit at the specified index
- */
-int get_bit(unsigned long int n, unsigned int index)
-{
-	return (index >= 64 ? -1 : n && (n & (1 << index)));
 }
