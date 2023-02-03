@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 {
 	int i;
 
-	for (i = 0; i < 32; i++)
+	for (i = 0; i < 64; i++)
 		_putchar(48 + get_bit(n, i));
 }
 
