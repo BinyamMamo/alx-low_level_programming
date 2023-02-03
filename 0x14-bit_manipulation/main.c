@@ -22,14 +22,14 @@ int _putchar(char c)
 int main(void)
 {
 	print_binary(0);
-	printf("\n");
+	printf(" => 0\n");
 	print_binary(7);
-	printf("\n");
+	printf(" => 7\n");
 	print_binary(98);
-	printf("\n");
+	printf(" => 98\n");
 	print_binary(1024);
-	printf("\n");
+	printf(" => 1024\n");
 	print_binary((1 << 10) + 1);
-	printf("\n");
+	printf(" => %u\n", (1 << 10) + 1);
 	return (0);
 }
