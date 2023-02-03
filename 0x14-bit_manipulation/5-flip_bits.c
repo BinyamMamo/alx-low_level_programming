@@ -12,11 +12,11 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	uint i, xor = n ^ m, b;
+	uint i, xor = n ^ m, b = 0;
 
-	while (xor)
+	while (xor > 0)
 	{
-		if (xor&0x01)
+		if (xor & 1)
 			b++;
 		xor = xor >> 1;
 	}
