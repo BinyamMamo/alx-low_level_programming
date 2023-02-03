@@ -41,5 +41,5 @@ void print_binary(unsigned long int n)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	return (index >= 64 ? -1 : n && (n & (1 << index)));
+	return (index >= sizeof(ulint) * 8 ? -1 : n && (n & (1 << index)));
 }
