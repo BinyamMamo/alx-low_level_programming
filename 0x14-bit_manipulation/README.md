@@ -42,21 +42,13 @@ Great! You've completed the quiz successfully! Keep going!
 
 What is 0x89 in base10?
 
-* 
+* (A) 89
 
-89
+* 135
 
-* 
+* 137
 
-135
-
-* 
-
-137
-
-* 
-
-139
+* 139
 
 #### Question #1
 

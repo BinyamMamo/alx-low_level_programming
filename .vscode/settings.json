@@ -1,7 +1,9 @@
 {
 	"files.associations": {
 		"function_pointers.h": "c",
-		"stdio.h": "c"
+		"stdio.h": "c",
+		"unistd.h": "c",
+		"fcntl.h": "c"
 	},
 	"zenMode.hideTabs": false,
 	"workbench.tree.renderIndentGuides": "always",
@@ -15,7 +17,7 @@
 	"workbench.editor.titleScrollbarSizing": "large",
 	"workbench.editor.untitled.hint": "hidden",
 	"workbench.editor.untitled.labelFormat": "name",
-	"workbench.editor.wrapTabs": false,
+	"workbench.editor.wrapTabs": true,
 	"task.quickOpen.detail": false,
 	"terminal.integrated.profiles.windows": {
 		"PowerShell": {
@@ -34,5 +36,6 @@
 			"source": "Git Bash"
 		}
 	},
-	"terminal.integrated.localEchoStyle": "dim"
+	"terminal.integrated.localEchoStyle": "dim",
+	"workbench.editor.tabCloseButton": "off"
 }
