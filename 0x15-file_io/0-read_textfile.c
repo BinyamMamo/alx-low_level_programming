@@ -1,7 +1,10 @@
 #include "main.h"
 
 #define STDOUT_FILENO 1
+
+#ifndef NULL
 #define NULL 0
+#endif
 
 /**
  * read_textfile - read textfile
