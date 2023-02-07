@@ -97,7 +97,7 @@ int init_files(int *file_from, int *file_to, char *from_name, char *to_name)
 		return (98);
 	};
 
-	*file_to = open(to_name, O_CREAT | O_TRUNC | O_RDWR);
+	*file_to = open(to_name, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	if (*file_to == -1)
 	{
 		fprintf(stderr, "Error: Can't write to %s\n", to_name);
