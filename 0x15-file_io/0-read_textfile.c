@@ -1,4 +1,5 @@
 #include "main.h"
+#include <sys/stat.h>
 
 #define STDOUT_FILENO 1
 
