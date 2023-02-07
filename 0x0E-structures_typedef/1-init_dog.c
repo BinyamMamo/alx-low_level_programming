@@ -1,4 +1,9 @@
 #include "dog.h"
+
+#ifndef NULL
+#define NULL 0
+#endif
+
 /**
  * init_dog - initializes a dog structure
  * @d: a dog structure
@@ -10,6 +15,8 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	if (d == NULL)
+		return;
 	d->name = name;
 	d->age = age;
 	d->owner = owner;
