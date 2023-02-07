@@ -1,6 +1,7 @@
 #include "main.h"
 #include <sys/stat.h>
 #include <stdio.h>
+#include <stddef.h>
 
 #ifndef STDOUT_FILENO
 #define STDOUT_FILENO 1
