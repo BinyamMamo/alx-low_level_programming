@@ -13,8 +13,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, c, j;
-	const char c = 0;
-	char *s = &c;
+	char *s = "";
 
 	if (s1 == NULL && s2 == NULL)
 		return (s);
