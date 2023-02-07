@@ -2,7 +2,13 @@
 #include <stdlib.h>
 #include "main.h"
 
+#ifndef STDOUT_FILENO
 #define STDOUT_FILENO 1
+#endif
+
+#ifndef STD_ERR
+#define STD_ERR STDERR_FILENO
+#endif
 
 int init_files(int *file_from, int *file_to, char *from_name, char *to_name);
 int close_files(int file_to, int file_from, char *from_name, char *to_name);
@@ -17,12 +23,12 @@ int close_files(int file_to, int file_from, char *from_name, char *to_name);
 int main(int ac, char **av)
 {
 	int file_from, file_to, i = 0, r = 0;
-	char buff[1025];
+	char buff[1024];
 	char *nameof_file_from, *file_to_name;
 
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STD_ERR, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -37,13 +43,13 @@ int main(int ac, char **av)
 	{
 		if (r < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", nameof_file_from);
+			dprintf(STD_ERR, "Error: Can't read from file %s\n", nameof_file_from);
 			return (98);
 		}
 		buff[r] = 0;
 		if (write(file_to, buff, r) <= 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to_name);
+			dprintf(STD_ERR, "Error: Can't write to %s\n", file_to_name);
 			exit(99);
 		}
 	}
@@ -67,12 +73,12 @@ int close_files(int file_to, int file_from, char *from_name, char *to_name)
 {
 	if (close(file_to) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", to_name);
+		dprintf(STD_ERR, "Error: Can't close fd %s\n", to_name);
 		return (1);
 	}
 	if (close(file_from) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", from_name);
+		dprintf(STD_ERR, "Error: Can't close fd %s\n", from_name);
 		return (1);
 	}
 
@@ -93,14 +99,14 @@ int init_files(int *file_from, int *file_to, char *from_name, char *to_name)
 	*file_from = open(from_name, O_RDONLY);
 	if (*file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from_name);
+		dprintf(STD_ERR, "Error: Can't read from file %s\n", from_name);
 		return (98);
 	};
 
 	*file_to = open(to_name, O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	if (*file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to_name);
+		dprintf(STD_ERR, "Error: Can't write to %s\n", to_name);
 		return (99);
 	}
 
