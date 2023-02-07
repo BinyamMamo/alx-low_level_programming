@@ -28,7 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		c++;
 
 	if (c == 0)
-		return (NULL);
+		return (s);
 
 	s = malloc(c + 1);
 
