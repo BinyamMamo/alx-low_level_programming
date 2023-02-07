@@ -19,7 +19,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	ssize_t lenr, written;
+	ssize_t read, written;
 	char *buff;
 
 	if (filename == NULL)
@@ -33,16 +33,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	lenr = read(fd, buff, letters);
+	read = read(fd, buff, letters);
 	close(fd);
-	if (lenr == -1)
+	if (read == -1)
 	{
 		free(buff);
 		return (0);
 	}
-	written = write(STDOUT_FILENO, buff, lenr);
+	written = write(STDOUT_FILENO, buff, read);
 	free(buff);
-	if (lenr != written)
+	if (read != written)
 		return (0);
 	return (written);
 }
