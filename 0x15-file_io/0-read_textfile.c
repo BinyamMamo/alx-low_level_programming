@@ -36,16 +36,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	while ((i = read(file, &c, 1)) != 0 && j < letters)
 	{
 		if (i < 0)
+		{
+			close(file);
 			return (0);
-		/**
-		 * if write fails it returns -1
-		 * and
-		 * if write could not write the expected amount of bytes it return 0
-		 * so checking if the return value gets below or equal to 0
-		 * will do the job of avoiding errors
-		 */
+		} /**
+			 * if write fails it returns -1
+			 * and
+			 * if write could not write the expected amount of bytes it return 0
+			 * so checking if the return value gets below or equal to 0
+			 * will do the job of avoiding errors
+			 */
 		if (write(STDOUT_FILENO, &c, 1) <= 0)
+		{
+			close(file);
 			return (0);
+		}
 		j++;
 	}
 	close(file);
