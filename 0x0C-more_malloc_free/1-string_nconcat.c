@@ -13,14 +13,19 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, c, j;
-	char *s;
+	const char c = 0;
+	char *s = &c;
 
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+		return (s);
+	if (s1 == NULL)
+		s1 = s;
+	if (s2 == NULL)
+		s2 = s;
 	c = 0;
-	while (s1[c] != 0 && s1 != NULL)
+	while (s1[c] != 0)
 		c++;
-	while (s2[c] != 0 && s2 != NULL)
+	while (s2[c] != 0)
 		c++;
 
 	if (c == 0)
@@ -31,14 +36,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s == NULL)
 		return (NULL);
 	i = 0;
-	while (s1[i] != 0 && s1 != NULL)
+	while (s1[i] != 0)
 	{
 		s[i] = s1[i];
 		i++;
 	}
 	j = i;
 	i = 0;
-	while (i < n && s2[i] != 0 && s2 != NULL)
+	while (i < n && s2[i] != 0)
 	{
 		s[j + i] = s2[i];
 		i++;
