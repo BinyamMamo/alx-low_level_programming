@@ -1,11 +1,9 @@
 #include "main.h"
 #include <sys/stat.h>
-#include <stdlib.h>
 
 #ifndef STDOUT_FILENO
 #define STDOUT_FILENO 1
 #endif
-
 #ifndef NULL
 #define NULL 0
 #endif
@@ -19,31 +17,41 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	ssize_t read_chars, written;
-	char *buffer;
+	int file;
+	char c = '0';
+	int i = 0;
+	size_t j = 0;
 
 	if (filename == NULL)
 		return (0);
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+
+	file = open(filename, O_RDONLY);
+
+	if (file == -1)
 		return (0);
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
+
+	i = read(file, &c, 1);
+	if (i < 0)
 	{
-		close(fd);
+		close(file);
 		return (0);
 	}
-	read_chars = read(fd, buffer, letters);
-	close(fd);
-	if (read_chars == -1)
+	while (i != 0 && j < letters)
 	{
-		free(buffer);
-		return (0);
+		if (i < 0)
+		{
+			close(file);
+			return (0);
+		}
+
+		if (write(STDOUT_FILENO, &c, 1) <= 0)
+		{
+			close(file);
+			return (0);
+		}
+		j++;
+		i = read(file, &c, 1);
 	}
-	written = write(STDOUT_FILENO, buffer, read_chars);
-	free(buffer);
-	if (read_chars != written)
-		return (0);
-	return (written);
+	close(file);
+	return (j);
 }
