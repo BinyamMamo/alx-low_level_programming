@@ -1,7 +1,10 @@
 #include "main.h"
 
 #define STDOUT_FILENO 1
-#define NULL 0
+
+#ifndef NULL
+#define NULL 
+#endif
 
 /**
  * append_text_to_file - appends text to an existing file
