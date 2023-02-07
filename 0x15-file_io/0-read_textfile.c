@@ -1,7 +1,9 @@
 #include "main.h"
 #include <sys/stat.h>
 
+#ifndef STDOUT_FILENO
 #define STDOUT_FILENO 1
+#endif
 
 #ifndef NULL
 #define NULL 0
