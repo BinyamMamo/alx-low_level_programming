@@ -13,12 +13,13 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, c, j;
-	char *s = "";
+	const char ch = 0;
+	char *s = NULL;
 
 	if (s1 == NULL)
-		s1 = s;
+		s1 = &ch;
 	if (s2 == NULL)
-		s2 = s;
+		s2 = &ch;
 	c = 0;
 	while (s1[c] != 0)
 		c++;
