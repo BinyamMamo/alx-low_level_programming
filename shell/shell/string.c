@@ -1,74 +1,44 @@
 /**
- * str_utils - contains all string utility functions needed in this project
+ * str_utils - contains all string manipulation functions needed in this project
  *
- * Description: contains print function for string output, custom atoi function
- *							for string conversion, and strlen function to find the length of
- *							a string.
+ * Description: contains _strcpy function for copying a string and _strcat for
+ *							concatenating two strings
  */
 
 #include "str.h"
-#include <unistd.h>
+#include <stdlib.h>
 
 /**
- * print - prints a string to the provided stream
- * @str: the string to print
- * @stream: the stream to print the string to
+ * _strcpy - copies a string to a different memory location
+ * @src: the source of the string to copy
+ * @cpy: the copied string
  *
  * Return: nothing
  */
-void print(char *str, int stream)
+void _strcpy(char *src, char *cpy) //! including `malloc` in this code might come not so handy when trying to free it latter. so it has been removed.
 {
-	if (str)			 /* if the string is not null*/
-		while (*str) /* loop through each character*/
-		{
-			write(stream, str, 1); /* and print them using `write()` from unistd.h*/
-			str++;
-		}
+	if (src) /* if the source is not null*/
+		while (*src)
+			*cpy = *src, src++, cpy++;
+	*cpy = 0;
 }
 
 /**
- * atoi - converts string to integer
- * @str: string to convert
+ * _strcat - concatenates two strings
+ * @str: the original string
+ * @cat: the string to concatenate
  *
- * Return: converted integer
+ * Return: the concatenated string
  */
-int _atoi(char *str)
+char *_strcat(char *str, char *cat)
 {
-	int i = 0;
+	char *str_cat = NULL;
 
-	if (!str || *str == '-' || *str == 0) /* avoid NULL and negative numbers*/ //! should I avoid negative numbers? AND should I return negative numbers on encountering empty string('\0')?(I think yes)
-		return (-1);
+	str_cat = malloc(sizeof(char) * (_strlen(str) + _strlen(cat) + 1));
 
-	while (*str)
-	{
-		if (*str < '0' || *str > '9')
-		{
-			if (i > 0)
-				break;
-			else
-				return (-1);
-		}
-		i *= 10;
-		i += *str - 48;
-		str++;
-	}
+	_strcpy(str, str_cat);
+	_strcpy(cat, str_cat + _strlen(str)); /* move str_cat by the length of str and copy the string to be catenated*/
+	str_cat[_strlen(str) + _strlen(cat)] = 0;
 
-	return (i);
-}
-
-/**
- * _strlen - finds the length of a string
- * @str: the string whose length is to be found
- *
- * Return: the string length
- */
-int _strlen(char *str)
-{
-	int len = 0;
-
-	if (str)
-		while (*str)
-			len++, str++;
-
-	return (len);
+	return (str_cat);
 }
