@@ -54,7 +54,7 @@ void print(char *str, int stream)
  */
 int main(void)
 {
-	printf("atoi: %d\n", _strlen(NULL));
+	printf("atoi: %d\n", _strlen("NULL"));
 	print("hi", STDOUT_FILENO);
 	return (0);
 }
