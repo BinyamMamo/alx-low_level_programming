@@ -9,36 +9,74 @@
 #include <stdlib.h>
 
 /**
- * _strcpy - copies a string to a different memory location
- * @src: the source of the string to copy
- * @cpy: the copied string
+ * _strcmp - compares two strings
+ * @str: the first string to compare
+ * @cmp: another string to compare with the first string
  *
- * Return: nothing
+ * Return: 1 if similar 0 if not
  */
-void _strcpy(char *src, char *cpy) //! including `malloc` in this code might come not so handy when trying to free it latter. so it has been removed.
+int _strcmp(char *str, char *cmp) //! might not work!!!. take care
 {
-	if (src) /* if the source is not null*/
-		while (*src)
-			*cpy = *src, src++, cpy++;
-	*cpy = 0;
+	if (str == NULL && cmp == NULL)
+		return (1);
+	if (_strlen(str) != _strlen(cmp))
+		return (0);
+	while (*str)
+	{
+		if (*str != *cmp)
+			return (0);
+		str++, cmp++;
+	}
+
+	return (1);
 }
 
 /**
- * _strcat - concatenates two strings
- * @str: the original string
- * @cat: the string to concatenate
+ * _strspn - Calculates the length of the initial segment of str1 which
+ *						consists entirely of characters from str2.
  *
- * Return: the concatenated string
+ * @str: The string to be searched.
+ * @spn: The characters to search for in str1.
+ *
+ * Return: The number of characters in the initial segment of str1 that match
+ *					any of the characters in str2.
  */
-char *_strcat(char *str, char *cat)
+int _strspn(char *str, char *spn)
 {
-	char *str_cat = NULL;
+	int match = 0;
 
-	str_cat = malloc(sizeof(char) * (_strlen(str) + _strlen(cat) + 1));
+	while (*str)
+	{
+		if (!_strchr(spn, *str))
+			break;
+		match++, str++;
+	}
 
-	_strcpy(str, str_cat);
-	_strcpy(cat, str_cat + _strlen(str)); /* move str_cat by the length of str and copy the string to be catenated*/
-	str_cat[_strlen(str) + _strlen(cat)] = 0;
+	return (match);
+}
 
-	return (str_cat);
+int strcspn(char *str, char *spn)
+{
+	int len = 0;
+
+	while (*str)
+	{
+		if (_strchr(spn, *str))
+			break;
+		len++, str++;
+	}
+
+	return (len);
+}
+
+char *_strchr(char *str, char c)
+{
+	while (*str)
+	{
+		if (*str == c)
+			return (str);
+		str++;
+	}
+
+	return (NULL);
 }
