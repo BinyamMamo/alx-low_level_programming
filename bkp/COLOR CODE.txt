@@ -1,4 +1,0 @@
-BLUE = project
-LIGHT BLUE = project with second deadline
-PURPLE = peer learning
-ORANGE = live youtube tutorial
