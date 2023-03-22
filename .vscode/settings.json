@@ -1,41 +1,43 @@
 {
-	"files.associations": {
-		"function_pointers.h": "c",
-		"stdio.h": "c",
-		"unistd.h": "c",
-		"fcntl.h": "c"
-	},
-	"zenMode.hideTabs": false,
-	"workbench.tree.renderIndentGuides": "always",
-	"workbench.view.alwaysShowHeaderActions": false,
-	"workbench.editor.highlightModifiedTabs": true,
-	"workbench.editor.labelFormat": "default",
-	"workbench.editor.pinnedTabSizing": "compact",
-	"workbench.editor.showTabs": true,
-	"workbench.editor.splitInGroupLayout": "horizontal",
-	"workbench.editor.tabSizing": "shrink",
-	"workbench.editor.titleScrollbarSizing": "large",
-	"workbench.editor.untitled.hint": "hidden",
-	"workbench.editor.untitled.labelFormat": "name",
-	"workbench.editor.wrapTabs": true,
-	"task.quickOpen.detail": false,
-	"terminal.integrated.profiles.windows": {
-		"PowerShell": {
-			"source": "PowerShell",
-			"icon": "terminal-powershell"
-		},
-		"Command Prompt": {
-			"path": [
-				"${env:windir}\\Sysnative\\cmd.exe",
-				"${env:windir}\\System32\\cmd.exe"
-			],
-			"args": [],
-			"icon": "terminal-cmd"
-		},
-		"Git Bash": {
-			"source": "Git Bash"
-		}
-	},
-	"terminal.integrated.localEchoStyle": "dim",
-	"workbench.editor.tabCloseButton": "off"
+    "files.associations": {
+        "function_pointers.h": "c",
+        "stdio.h": "c",
+        "unistd.h": "c",
+        "fcntl.h": "c",
+        "stdlib.h": "c",
+        "string.h": "c"
+    },
+    "zenMode.hideTabs": false,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.view.alwaysShowHeaderActions": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.labelFormat": "default",
+    "workbench.editor.pinnedTabSizing": "compact",
+    "workbench.editor.showTabs": true,
+    "workbench.editor.splitInGroupLayout": "horizontal",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.titleScrollbarSizing": "large",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.untitled.labelFormat": "name",
+    "workbench.editor.wrapTabs": true,
+    "task.quickOpen.detail": false,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    },
+    "terminal.integrated.localEchoStyle": "dim",
+    "workbench.editor.tabCloseButton": "right"
 }
