@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	while (fgets(line, sizeof(line), file))
 	{
 		line_no++;
-		token = strtok(line, " \n");
+		token = strtok(line, " \n\r");
 
 		if (token == NULL)
 			continue;
@@ -55,11 +55,7 @@ int main(int argc, char *argv[])
 			if (!strcmp(inst[i].opcode, token))
 			{
 				func = inst[i].f;
-				if (stack == NULL)
-					printf("stack is NULL\n");
 				(*func)(&stack, line_no);
-				if (stack == NULL)
-					printf("stack is NULL\n");
 				found = 1;
 			}
 		}
@@ -80,7 +76,6 @@ void pall(stack_t **stack, unsigned int line_number)
 	stack_t *temp = NULL;
 	stack_t *pos = *stack;
 
-	printf("reached: pall %d\n", pos->prev);
 	if (pos == NULL)
 	{
 		fprintf(stderr, "stack underflow");
@@ -104,8 +99,8 @@ void push(stack_t **stack, unsigned int line_number)
 	stack_t *pos = *stack;
 	char *token = strtok(NULL, " \n");
 	int data = 0;
-
-	printf("reached: push\n");
+	// *stack = temp;
+	// temp->n = data;
 	if (token == NULL)
 	{
 		fprintf(stderr, "L%u: usage: push integer", line_number);
