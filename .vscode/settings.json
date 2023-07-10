@@ -5,7 +5,8 @@
         "unistd.h": "c",
         "fcntl.h": "c",
         "stdlib.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "math.h": "c"
     },
     "zenMode.hideTabs": false,
     "workbench.tree.renderIndentGuides": "always",
