@@ -1,0 +1,2 @@
+ALL: output
+	./output

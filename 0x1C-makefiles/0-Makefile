@@ -1,0 +1,2 @@
+ALL: school
+    ./school
