@@ -1,2 +1,2 @@
-all: school
-    ./school
+all: main.c school
+    gcc main.c -o school
