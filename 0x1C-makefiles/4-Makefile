@@ -8,6 +8,8 @@ CFLAGS= -Wall -Werror -Wextra -pedantic
 all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) $(NAME)
 
+.PHONY: clean oclean fclean re
+
 clean: 
 	$(RM) $(NAME) *~
 
