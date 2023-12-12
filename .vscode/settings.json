@@ -8,17 +8,15 @@
         "string.h": "c",
         "math.h": "c"
     },
-    "zenMode.hideTabs": false,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.view.alwaysShowHeaderActions": false,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.labelFormat": "default",
     "workbench.editor.pinnedTabSizing": "compact",
-    "workbench.editor.showTabs": true,
+    "workbench.editor.showTabs": "multiple",
     "workbench.editor.splitInGroupLayout": "horizontal",
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.titleScrollbarSizing": "large",
-    "workbench.editor.untitled.hint": "hidden",
     "workbench.editor.untitled.labelFormat": "name",
     "workbench.editor.wrapTabs": true,
     "task.quickOpen.detail": false,
@@ -40,5 +38,6 @@
         }
     },
     "terminal.integrated.localEchoStyle": "dim",
-    "workbench.editor.tabCloseButton": "right"
+    "workbench.editor.tabCloseButton": "right",
+    "workbench.editor.empty.hint": "hidden"
 }
