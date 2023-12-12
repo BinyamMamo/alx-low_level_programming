@@ -1,6 +1,8 @@
 # 0x1E. C - Search Algorithms
 
-![](https://img.freepik.com/free-vector/magnifying-glass-analysis-search-symbol-business-science-internet-surfing-concept-abstract-digital-wireframe-low-poly-mesh-vector-illustration_587448-453.jpg?w=996&t=st=1702402440~exp=1702403040~hmac=0c8898e7b7a227774d18a79fda0680b47a91af159c322b8eb039ae747ea5ed10)
+<p>
+<img src="https://img.freepik.com/free-vector/magnifying-glass-analysis-search-symbol-business-science-internet-surfing-concept-abstract-digital-wireframe-low-poly-mesh-vector-illustration_587448-453.jpg?w=996&t=st=1702402440~exp=1702403040~hmac=0c8898e7b7a227774d18a79fda0680b47a91af159c322b8eb039ae747ea5ed10">
+</p>
 
 This project provides a comprehensive overview of various search algorithms and their implementation in C. It also explores the concept of time and space complexity, providing a deeper understanding of how these algorithms perform under different conditions.
 
